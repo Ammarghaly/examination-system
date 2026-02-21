@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create New Account</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="../globalCss/global-css.css" />
+  </head>
+  <body>
+    <form class="login" id="registerForm">
+      <div class="head">
+        <img src="./images/hat.png" alt="image hat" />
+        <h2>Create New Account</h2>
+        <p></p>
+      </div>
+      <div class="inputs">
+        <input
+          id="firstName"
+          name="firstName"
+          type="text"
+          placeholder="First Name"
+        />
+        <input
+          id="listName"
+          name="listName"
+          type="text"
+          placeholder="Last Name"
+        />
+        <input
+          id="emailAddress"
+          name="emailAddress"
+          type="text"
+          placeholder="Email Address"
+        />
+
+        <div class="password-wrapper">
+          <input
+            id="password"
+            name="password"
+            type="password"
+            placeholder="Password"
+          />
+          <span
+            class="toggle-password"
+            onclick="togglePassword('password', this)"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="eye-icon"
+            >
+              <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+              <circle cx="12" cy="12" r="3"></circle>
+            </svg>
+          </span>
+        </div>
+
+        <div class="password-wrapper">
+          <input
+            id="rePassword"
+            name="rePassword"
+            type="password"
+            placeholder="Re-Password"
+          />
+          <span
+            class="toggle-password"
+            onclick="togglePassword('rePassword', this)"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="eye-icon"
+            >
+              <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+              <circle cx="12" cy="12" r="3"></circle>
+            </svg>
+          </span>
+        </div>
+        <input
+          id="question"
+          name="question"
+          type="text"
+          placeholder="Security Question"
+        />
+        <input id="anther" name="anther" type="text" placeholder="Anther" />
+      </div>
+      <button type="submit" id="login">Create Account</button>
+      <div>
+        <p>Already have an account?</p>
+        <a href="../user login/index.html">log In </a>
+      </div>
+    </form>
+    <div class="alert"></div>
+    <script type="module" src="./script/script.js"></script>
+    <script>
+      function togglePassword(inputId, iconElement) {
+        const passwordInput = document.getElementById(inputId);
+
+        const eyeOpen = `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>`;
+        const eyeClose = `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.94 17.94A10.07 10.07 0 0 1 12 19c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"></path><line x1="1" y1="1" x2="23" y2="23"></line></svg>`;
+
+        if (passwordInput.type === "password") {
+          passwordInput.type = "text";
+          iconElement.innerHTML = eyeClose;
+        } else {
+          passwordInput.type = "password";
+          iconElement.innerHTML = eyeOpen;
+        }
+      }
+    </script>
+  </body>
+</html>

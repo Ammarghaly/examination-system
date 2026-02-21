@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Get Password</title>
+  </head>
+  <body>
+    <form id="emailForm">
+      <input type="email" id="emailInput" placeholder="Enter Email Address" />
+      <button type="submit">Get Password</button>
+    </form>
+
+    <form id="answerForm" style="display: none">
+      <p id="questionText"></p>
+      <input type="text" id="answerInput" placeholder="Enter Answer" />
+      <button type="submit">Verify</button>
+    </form>
+
+    <form id="newPasswordForm" style="display: none">
+      <input
+        type="password"
+        id="newPasswordInput"
+        placeholder="Enter A New Password"
+      />
+      <button type="submit">Change Password</button>
+    </form>
+    <script type="module" src="script.js"></script>
+  </body>
+</html>

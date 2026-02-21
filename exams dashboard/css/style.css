@@ -1,0 +1,386 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: aliceblue;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.navbar-left,
+.navbar-right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-center {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  transition: 2s;
+}
+.navbar-right {
+  justify-content: flex-end;
+  gap: 25px;
+}
+
+.btn-logout {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: transparent;
+  border: 1px solid #dcdcdc;
+  color: #444;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-logout:hover {
+  background-color: #ffeaea;
+  color: #d32f2f;
+  border-color: #ffcccc;
+  stroke: #d32f2f;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  background-color: #f8f9fa;
+  border: 1px solid transparent;
+  border-radius: 20px;
+  padding: 10px 20px;
+  width: 100%;
+  max-width: 450px;
+  transition: border 0.3s ease;
+}
+
+.search-container:focus-within {
+  border: 1px solid #64bed4;
+  background-color: #ffffff63;
+}
+
+.search-icon {
+  margin-right: 10px;
+}
+
+.search-container input {
+  border: none;
+  background: transparent;
+  outline: none;
+  width: 100%;
+  font-size: 14px;
+  color: #333;
+}
+
+.search-container input::placeholder {
+  color: #999;
+}
+
+.btn-notification {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.notification-dot {
+  position: absolute;
+  top: 0px;
+  right: 2px;
+  width: 8px;
+  height: 8px;
+  background-color: #ef4444;
+  border-radius: 50%;
+  border: 2px solid #fff;
+}
+
+.user-profile {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+}
+
+.user-name {
+  font-size: 14px;
+  font-weight: 700;
+  color: #111;
+}
+
+.user-role {
+  font-size: 12px;
+  color: #888;
+  margin-top: 2px;
+}
+
+.user-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  background-color: #f0cbb5;
+}
+@media (max-width: 900px) {
+  .navbar {
+    padding: 15px 20px;
+  }
+
+  .user-info {
+    display: none;
+  }
+
+  .navbar-right {
+    gap: 15px;
+  }
+}
+
+@media (max-width: 650px) {
+  .navbar {
+    flex-wrap: wrap;
+    padding: 15px;
+  }
+
+  .navbar-left {
+    order: 1;
+    flex: 0;
+  }
+
+  .navbar-right {
+    order: 2;
+    flex: 0;
+    margin-left: auto;
+  }
+
+  .navbar-center {
+    order: 3;
+    flex: 1 1 100%;
+    margin-top: 15px;
+  }
+
+  .logout-text {
+    display: none;
+  }
+
+  .btn-logout {
+    padding: 10px;
+  }
+
+  .search-container {
+    max-width: 100%;
+  }
+}
+
+.cards-grid,
+#h1 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px,350px));
+  gap: 24px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+#h1{
+    margin: 30px auto;
+}
+.card-green {
+  --bg-color: #e5f7f0;
+  --accent-color: #1a7b54;
+}
+.card-purple {
+  --bg-color: #f4ecfb; 
+  --accent-color: #7d48b1; 
+}
+.card-blue {
+  --bg-color: #eaf2ff;  
+  --accent-color: #1c5fd1;
+}
+
+
+.card-orange {
+  --bg-color: #fff4ed;
+  --accent-color: #b54708;
+}
+
+
+.card-red {
+  --bg-color: #ffe4e6; 
+  --accent-color: #be123c; 
+}
+
+.exam-card {
+  background-color: var(--bg-color);
+  border-radius: 24px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.exam-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.subject-tag {
+  background-color: #ffffff;
+  color: var(--accent-color);
+  font-size: 11px;
+  font-weight: 800;
+  padding: 6px 12px;
+  border-radius: 20px;
+  letter-spacing: 0.5px;
+}
+
+.subject-icon {
+  background-color: #ffffff;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--accent-color);
+}
+
+.card-body {
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.exam-title {
+  font-size: 22px;
+  font-weight: 800;
+  color: #111;
+  margin-bottom: 16px;
+}
+
+.exam-meta {
+  display: flex;
+  gap: 12px;
+}
+
+.meta-pill {
+  background-color: #ffffff;
+  padding: 6px 14px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #333;
+}
+
+.card-footer {
+  margin-top: auto;
+}
+
+.added-label {
+  display: block;
+  font-size: 11px;
+  font-weight: 700;
+  color: #888;
+  margin-bottom: 8px;
+  letter-spacing: 0.5px;
+}
+
+.teacher-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.teacher-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.teacher-name {
+  font-size: 14px;
+  font-weight: 700;
+  color: #111;
+}
+.add-exam-card {
+    background-color: #ffffff;
+    border: 2px dashed #d1d5db; 
+    border-radius: 24px;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    text-align: center;
+    min-height: 260px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.add-exam-card:hover {
+    border-color: #9ca3af;
+    background-color: #f9fafb; 
+    transform: translateY(-5px); 
+}
+
+.add-icon-circle {
+    width: 60px;
+    height: 60px;
+    background-color: #f3f4f6; 
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.add-exam-card:hover .add-icon-circle {
+    background-color: #e5e7eb;
+}
+
+.add-title {
+    font-size: 18px;
+    font-weight: 800;
+    color: #111;
+    margin-bottom: 10px;
+}
+
+.add-desc {
+    font-size: 14px;
+    color: #888;
+    line-height: 1.5;
+    max-width: 220px;/
+}

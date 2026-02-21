@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="../globalCss/global-css.css" />
+  </head>
+  <body>
+    <nav>
+      <span>&#9776;</span>
+      <ul>
+        <li><a href="#">Exams</a></li>
+        <li><a href="#">Students</a></li>
+        <li><a href="#">Reports</a></li>
+      </ul>
+      <div class="avatar">
+        <img src="./images/hat.png" alt="avatar" />
+      </div>
+    </nav>
+    <div class="container" id="containerQuestion">
+      <h1>Create New Exams</h1>
+
+      <form id="infoExams">
+        <div class="one">
+          <div class="field">
+            <label for="examTitle">Title Exams</label>
+            <input
+              id="examTitle"
+              name="title"
+              type="text"
+              placeholder="Enter exam title"
+            />
+          </div>
+
+          <div class="field">
+            <label for="examTime">Time Exams</label>
+            <input
+              id="examTime"
+              name="time"
+              type="number"
+              placeholder="Minutes"
+            />
+          </div>
+        </div>
+
+        <hr />
+
+        <div class="container-question">
+          <div class="field">
+            <label for="questionText">Text Question</label>
+            <textarea
+              class="questionText"
+              name="question"
+              rows="4"
+              placeholder="Write the question here"
+            ></textarea>
+          </div>
+
+          <div class="question">
+            <label class="question-label">Answer Option</label>
+
+            <div class="options">
+              <div class="option">
+                <input id="opt1" name="answer" type="radio" value="1" />
+                <input
+                  type="text"
+                  name="answer_text_1"
+                  placeholder="Option 1"
+                />
+              </div>
+
+              <div class="option">
+                <input id="opt2" name="answer" type="radio" value="2" />
+                <input
+                  type="text"
+                  name="answer_text_2"
+                  placeholder="Option 2"
+                />
+              </div>
+
+              <div class="option">
+                <input id="opt3" name="answer" type="radio" value="3" />
+                <input
+                  type="text"
+                  name="answer_text_3"
+                  placeholder="Option 3"
+                />
+              </div>
+
+              <div class="option">
+                <input id="opt4" name="answer" type="radio" value="4" />
+                <input
+                  type="text"
+                  name="answer_text_4"
+                  placeholder="Option 4"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+    <section>
+      <button id="saveExams" type="submit" form="infoExams">Save Exams</button>
+      <button id="addQuestion">Add Question</button>
+    </section>
+    <div class="alert"></div>
+    <script type="module" src="script/script.js"></script>
+  </body>
+</html>
