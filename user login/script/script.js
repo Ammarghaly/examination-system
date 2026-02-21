@@ -6,11 +6,17 @@ const loginBtn = document.querySelector("#login");
 const alertUI = document.querySelector(".alert");
 
 
+
+
+const userString = localStorage.getItem("user");
+if (userString) {
+  window.open("../../exams dashboard/index.html", "_self");
+}
+
+
 loginBtn.addEventListener("click", async (e) => {
   e.preventDefault();
-
   alertUI.classList.remove("success", "error", "show");
-
   const { data, error } = await getData("http://localhost:3000/users");
 
   if (error) {
@@ -36,4 +42,6 @@ loginBtn.addEventListener("click", async (e) => {
   }
 
   alertUI.classList.add("show");
+
+   window.open("../../exams dashboard/index.html", "_self");
 });

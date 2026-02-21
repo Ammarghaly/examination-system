@@ -15,901 +15,1699 @@
       "firstName": "عمار",
       "listName": "جاد",
       "emailAddress": "ammar@gmail.com",
-      "password": "123",
+      "password": "123123",
       "question": "123",
       "anther": "123",
       "role": "student"
     }
   ],
   "exams": [
-    [
-      {
-        "id": "exam_math_01",
-        "title": "Advanced Math Quiz",
-        "teacherId": "t1",
-        "examCode": "MATH99",
-        "isActive": true,
-        "time": 25,
-        "questions": [
-          {
-            "id": "qm1",
-            "question": "What is 5 + 3?",
-            "options": ["6", "7", "8", "9"],
-            "correctAnswer": "8"
-          },
-          {
-            "id": "qm2",
-            "question": "What is 12 - 4?",
-            "options": ["6", "7", "8", "9"],
-            "correctAnswer": "8"
-          },
-          {
-            "id": "qm3",
-            "question": "What is 6 × 7?",
-            "options": ["36", "42", "48", "40"],
-            "correctAnswer": "42"
-          },
-          {
-            "id": "qm4",
-            "question": "What is 81 ÷ 9?",
-            "options": ["8", "9", "7", "6"],
-            "correctAnswer": "9"
-          },
-          {
-            "id": "qm5",
-            "question": "What is 15 + 10?",
-            "options": ["20", "25", "30", "35"],
-            "correctAnswer": "25"
-          },
-          {
-            "id": "qm6",
-            "question": "What is 14 - 5?",
-            "options": ["7", "8", "9", "10"],
-            "correctAnswer": "9"
-          },
-          {
-            "id": "qm7",
-            "question": "What is 9 × 3?",
-            "options": ["27", "21", "18", "24"],
-            "correctAnswer": "27"
-          },
-          {
-            "id": "qm8",
-            "question": "What is 56 ÷ 7?",
-            "options": ["6", "7", "8", "9"],
-            "correctAnswer": "8"
-          },
-          {
-            "id": "qm9",
-            "question": "What is 100 - 45?",
-            "options": ["45", "55", "65", "60"],
-            "correctAnswer": "55"
-          },
-          {
-            "id": "qm10",
-            "question": "What is 11 + 22?",
-            "options": ["31", "32", "33", "34"],
-            "correctAnswer": "33"
-          },
-          {
-            "id": "qm11",
-            "question": "What is 8 × 8?",
-            "options": ["64", "56", "72", "81"],
-            "correctAnswer": "64"
-          },
-          {
-            "id": "qm12",
-            "question": "What is 90 ÷ 10?",
-            "options": ["8", "9", "10", "7"],
-            "correctAnswer": "9"
-          },
-          {
-            "id": "qm13",
-            "question": "What is 25 + 25?",
-            "options": ["40", "45", "50", "55"],
-            "correctAnswer": "50"
-          },
-          {
-            "id": "qm14",
-            "question": "What is 60 - 15?",
-            "options": ["45", "40", "35", "50"],
-            "correctAnswer": "45"
-          },
-          {
-            "id": "qm15",
-            "question": "What is 7 × 6?",
-            "options": ["42", "36", "48", "40"],
-            "correctAnswer": "42"
-          },
-          {
-            "id": "qm16",
-            "question": "What is 144 ÷ 12?",
-            "options": ["11", "12", "13", "10"],
-            "correctAnswer": "12"
-          },
-          {
-            "id": "qm17",
-            "question": "What is 19 + 6?",
-            "options": ["24", "25", "26", "23"],
-            "correctAnswer": "25"
-          },
-          {
-            "id": "qm18",
-            "question": "What is 50 - 18?",
-            "options": ["30", "32", "28", "35"],
-            "correctAnswer": "32"
-          },
-          {
-            "id": "qm19",
-            "question": "What is 4 × 9?",
-            "options": ["36", "32", "40", "28"],
-            "correctAnswer": "36"
-          },
-          {
-            "id": "qm20",
-            "question": "What is 63 ÷ 9?",
-            "options": ["6", "7", "8", "9"],
-            "correctAnswer": "7"
-          },
-          {
-            "id": "qm21",
-            "question": "Square root of 81?",
-            "options": ["7", "8", "9", "10"],
-            "correctAnswer": "9"
-          },
-          {
-            "id": "qm22",
-            "question": "2 to the power of 3?",
-            "options": ["6", "8", "9", "12"],
-            "correctAnswer": "8"
-          },
-          {
-            "id": "qm23",
-            "question": "What is 50% of 200?",
-            "options": ["50", "100", "150", "25"],
-            "correctAnswer": "100"
-          },
-          {
-            "id": "qm24",
-            "question": "15 x 0 = ?",
-            "options": ["15", "0", "1", "10"],
-            "correctAnswer": "0"
-          },
-          {
-            "id": "qm25",
-            "question": "How many sides in a triangle?",
-            "options": ["2", "3", "4", "5"],
-            "correctAnswer": "3"
-          },
-          {
-            "id": "qm26",
-            "question": "100 + 200",
-            "options": ["300", "400", "250", "100"],
-            "correctAnswer": "300"
-          },
-          {
-            "id": "qm27",
-            "question": "Value of Pi (approx)?",
-            "options": ["3.14", "2.14", "4.12", "3.00"],
-            "correctAnswer": "3.14"
-          },
-          {
-            "id": "qm28",
-            "question": "Next prime after 7?",
-            "options": ["9", "10", "11", "13"],
-            "correctAnswer": "11"
-          },
-          {
-            "id": "qm29",
-            "question": "Degrees in a right angle?",
-            "options": ["45", "90", "180", "360"],
-            "correctAnswer": "90"
-          },
-          {
-            "id": "qm30",
-            "question": "12 x 12",
-            "options": ["122", "144", "124", "100"],
-            "correctAnswer": "144"
-          }
-        ]
-      },
-      {
-        "id": "exam_science_01",
-        "title": "General Science",
-        "teacherId": "t2",
-        "examCode": "SCI101",
-        "isActive": true,
-        "time": 20,
-        "questions": [
-          {
-            "id": "qs1",
-            "question": "What is H2O?",
-            "options": ["Oxygen", "Gold", "Water", "Silver"],
-            "correctAnswer": "Water"
-          },
-          {
-            "id": "qs2",
-            "question": "Center of our solar system?",
-            "options": ["Earth", "Mars", "Sun", "Moon"],
-            "correctAnswer": "Sun"
-          },
-          {
-            "id": "qs3",
-            "question": "Gas we breathe in?",
-            "options": ["Oxygen", "Helium", "Carbon", "Nitrogen"],
-            "correctAnswer": "Oxygen"
-          },
-          {
-            "id": "qs4",
-            "question": "Hardest natural substance?",
-            "options": ["Gold", "Iron", "Diamond", "Silver"],
-            "correctAnswer": "Diamond"
-          },
-          {
-            "id": "qs5",
-            "question": "Planet known as Red Planet?",
-            "options": ["Venus", "Mars", "Jupiter", "Saturn"],
-            "correctAnswer": "Mars"
-          },
-          {
-            "id": "qs6",
-            "question": "Boiling point of water (C)?",
-            "options": ["50", "90", "100", "150"],
-            "correctAnswer": "100"
-          },
-          {
-            "id": "qs7",
-            "question": "Animal that eats plants only?",
-            "options": ["Carnivore", "Herbivore", "Omnivore", "Insect"],
-            "correctAnswer": "Herbivore"
-          },
-          {
-            "id": "qs8",
-            "question": "Largest organ in human body?",
-            "options": ["Heart", "Liver", "Skin", "Lungs"],
-            "correctAnswer": "Skin"
-          },
-          {
-            "id": "qs9",
-            "question": "Speed of light is faster than sound?",
-            "options": ["True", "False", "Equal", "Unknown"],
-            "correctAnswer": "True"
-          },
-          {
-            "id": "qs10",
-            "question": "How many bones in adult human?",
-            "options": ["200", "206", "300", "150"],
-            "correctAnswer": "206"
-          },
-          {
-            "id": "qs11",
-            "question": "Symbol for Oxygen?",
-            "options": ["O", "Ox", "Og", "On"],
-            "correctAnswer": "O"
-          },
-          {
-            "id": "qs12",
-            "question": "Force keeping us on ground?",
-            "options": ["Magnetism", "Gravity", "Friction", "Tension"],
-            "correctAnswer": "Gravity"
-          },
-          {
-            "id": "qs13",
-            "question": "Main organ for pumping blood?",
-            "options": ["Brain", "Lungs", "Heart", "Stomach"],
-            "correctAnswer": "Heart"
-          },
-          {
-            "id": "qs14",
-            "question": "Process plants make food?",
-            "options": ["Respiration", "Photosynthesis", "Digestion", "Growth"],
-            "correctAnswer": "Photosynthesis"
-          },
-          {
-            "id": "qs15",
-            "question": "What is the closest star to Earth?",
-            "options": ["Sirius", "Sun", "Alpha", "Pole Star"],
-            "correctAnswer": "Sun"
-          },
-          {
-            "id": "qs16",
-            "question": "Which is a mammal?",
-            "options": ["Shark", "Whale", "Eagle", "Snake"],
-            "correctAnswer": "Whale"
-          },
-          {
-            "id": "qs17",
-            "question": "Freezing point of water (C)?",
-            "options": ["10", "0", "-10", "100"],
-            "correctAnswer": "0"
-          },
-          {
-            "id": "qs18",
-            "question": "Number of planets in solar system?",
-            "options": ["7", "8", "9", "10"],
-            "correctAnswer": "8"
-          },
-          {
-            "id": "qs19",
-            "question": "What do bees make?",
-            "options": ["Milk", "Silk", "Honey", "Wool"],
-            "correctAnswer": "Honey"
-          },
-          {
-            "id": "qs20",
-            "question": "Primary source of energy?",
-            "options": ["Moon", "Sun", "Wind", "Ocean"],
-            "correctAnswer": "Sun"
-          }
-        ]
-      },
-      {
-        "id": "exam_history_01",
-        "title": "World History",
-        "teacherId": "t3",
-        "examCode": "HIS202",
-        "isActive": false,
-        "time": 15,
-        "questions": [
-          {
-            "id": "qh1",
-            "question": "Who built the Pyramids?",
-            "options": ["Romans", "Egyptians", "Greeks", "Mayans"],
-            "correctAnswer": "Egyptians"
-          },
-          {
-            "id": "qh2",
-            "question": "First President of USA?",
-            "options": ["Lincoln", "Washington", "Kennedy", "Bush"],
-            "correctAnswer": "Washington"
-          },
-          {
-            "id": "qh3",
-            "question": "Start of World War I?",
-            "options": ["1914", "1918", "1939", "1945"],
-            "correctAnswer": "1914"
-          },
-          {
-            "id": "qh4",
-            "question": "Discovered America?",
-            "options": ["Columbus", "Magellan", "Cook", "Drake"],
-            "correctAnswer": "Columbus"
-          },
-          {
-            "id": "qh5",
-            "question": "Ancient Roman language?",
-            "options": ["Greek", "Latin", "English", "French"],
-            "correctAnswer": "Latin"
-          },
-          {
-            "id": "qh6",
-            "question": "Where were the Vikings from?",
-            "options": ["Spain", "Scandinavia", "Italy", "Egypt"],
-            "correctAnswer": "Scandinavia"
-          },
-          {
-            "id": "qh7",
-            "question": "Who painted Mona Lisa?",
-            "options": ["Picasso", "Da Vinci", "Van Gogh", "Monet"],
-            "correctAnswer": "Da Vinci"
-          },
-          {
-            "id": "qh8",
-            "question": "Titanic sank in which year?",
-            "options": ["1910", "1912", "1915", "1920"],
-            "correctAnswer": "1912"
-          },
-          {
-            "id": "qh9",
-            "question": "Queen of Ancient Egypt?",
-            "options": ["Cleopatra", "Victoria", "Elizabeth", "Mary"],
-            "correctAnswer": "Cleopatra"
-          },
-          {
-            "id": "qh10",
-            "question": "Great Wall is in?",
-            "options": ["Japan", "India", "China", "Russia"],
-            "correctAnswer": "China"
-          },
-          {
-            "id": "qh11",
-            "question": "Currency of UK?",
-            "options": ["Dollar", "Euro", "Pound", "Yen"],
-            "correctAnswer": "Pound"
-          },
-          {
-            "id": "qh12",
-            "question": "Civilization of Machu Picchu?",
-            "options": ["Aztec", "Inca", "Maya", "Olmec"],
-            "correctAnswer": "Inca"
-          },
-          {
-            "id": "qh13",
-            "question": "Year of Moon Landing?",
-            "options": ["1959", "1969", "1979", "1989"],
-            "correctAnswer": "1969"
-          },
-          {
-            "id": "qh14",
-            "question": "Invented the telephone?",
-            "options": ["Edison", "Bell", "Tesla", "Marconi"],
-            "correctAnswer": "Bell"
-          },
-          {
-            "id": "qh15",
-            "question": "Napolean was emperor of?",
-            "options": ["Germany", "Russia", "France", "Italy"],
-            "correctAnswer": "France"
-          },
-          {
-            "id": "qh16",
-            "question": "Ancient Greek capital?",
-            "options": ["Rome", "Athens", "Cairo", "Sparta"],
-            "correctAnswer": "Athens"
-          },
-          {
-            "id": "qh17",
-            "question": "Statue of Liberty gift from?",
-            "options": ["UK", "Spain", "France", "Germany"],
-            "correctAnswer": "France"
-          },
-          {
-            "id": "qh18",
-            "question": "First man in space?",
-            "options": ["Armstrong", "Gagarin", "Glenn", "Aldrin"],
-            "correctAnswer": "Gagarin"
-          },
-          {
-            "id": "qh19",
-            "question": "Country of Nelson Mandela?",
-            "options": ["Nigeria", "Kenya", "South Africa", "Egypt"],
-            "correctAnswer": "South Africa"
-          },
-          {
-            "id": "qh20",
-            "question": "End of World War II?",
-            "options": ["1940", "1942", "1945", "1950"],
-            "correctAnswer": "1945"
-          },
-          {
-            "id": "qh21",
-            "question": "Who wrote Romeo and Juliet?",
-            "options": ["Dickens", "Shakespeare", "Twain", "Homer"],
-            "correctAnswer": "Shakespeare"
-          },
-          {
-            "id": "qh22",
-            "question": "Capital of ancient Rome?",
-            "options": ["Milan", "Venice", "Rome", "Naples"],
-            "correctAnswer": "Rome"
-          }
-        ]
-      },
-      {
-        "id": "exam_english_01",
-        "title": "English Grammar",
-        "teacherId": "t4",
-        "examCode": "ENG303",
-        "isActive": true,
-        "time": 10,
-        "questions": [
-          {
-            "id": "qe1",
-            "question": "Opposite of 'Hot'?",
-            "options": ["Cold", "Warm", "Dry", "Wet"],
-            "correctAnswer": "Cold"
-          },
-          {
-            "id": "qe2",
-            "question": "Past tense of 'Run'?",
-            "options": ["Runned", "Ran", "Running", "Runs"],
-            "correctAnswer": "Ran"
-          },
-          {
-            "id": "qe3",
-            "question": "Plural of 'Child'?",
-            "options": ["Childs", "Children", "Childrens", "Kid"],
-            "correctAnswer": "Children"
-          },
-          {
-            "id": "qe4",
-            "question": "Synonym for 'Happy'?",
-            "options": ["Sad", "Joyful", "Angry", "Tired"],
-            "correctAnswer": "Joyful"
-          },
-          {
-            "id": "qe5",
-            "question": "Correct spelling?",
-            "options": ["Recieve", "Receive", "Receve", "Riceive"],
-            "correctAnswer": "Receive"
-          },
-          {
-            "id": "qe6",
-            "question": "Verb in 'She sings well'?",
-            "options": ["She", "Sings", "Well", "None"],
-            "correctAnswer": "Sings"
-          },
-          {
-            "id": "qe7",
-            "question": "Past of 'Go'?",
-            "options": ["Goed", "Gone", "Went", "Going"],
-            "correctAnswer": "Went"
-          },
-          {
-            "id": "qe8",
-            "question": "Opposite of 'Big'?",
-            "options": ["Huge", "Large", "Small", "Giant"],
-            "correctAnswer": "Small"
-          },
-          {
-            "id": "qe9",
-            "question": "Plural of 'Mouse'?",
-            "options": ["Mouses", "Mice", "Mices", "Rat"],
-            "correctAnswer": "Mice"
-          },
-          {
-            "id": "qe10",
-            "question": "A group of lions is a?",
-            "options": ["Pack", "Herd", "Pride", "Flock"],
-            "correctAnswer": "Pride"
-          },
-          {
-            "id": "qe11",
-            "question": "Adjective in 'Red car'?",
-            "options": ["Red", "Car", "Is", "A"],
-            "correctAnswer": "Red"
-          },
-          {
-            "id": "qe12",
-            "question": "Rhymes with 'Cat'?",
-            "options": ["Dog", "Bat", "Cut", "Cot"],
-            "correctAnswer": "Bat"
-          },
-          {
-            "id": "qe13",
-            "question": "Correct article: '_ apple'",
-            "options": ["A", "An", "The", "None"],
-            "correctAnswer": "An"
-          },
-          {
-            "id": "qe14",
-            "question": "Past participle of 'Eat'?",
-            "options": ["Ate", "Eaten", "Eating", "Eats"],
-            "correctAnswer": "Eaten"
-          },
-          {
-            "id": "qe15",
-            "question": "Opposite of 'Win'?",
-            "options": ["Lose", "Victory", "Game", "Play"],
-            "correctAnswer": "Lose"
-          },
-          {
-            "id": "qe16",
-            "question": "Homophone for 'Sea'?",
-            "options": ["See", "Saw", "Scene", "She"],
-            "correctAnswer": "See"
-          },
-          {
-            "id": "qe17",
-            "question": "Correct spelling?",
-            "options": ["Neccessary", "Necessary", "Necesary", "Neccesary"],
-            "correctAnswer": "Necessary"
-          },
-          {
-            "id": "qe18",
-            "question": "Vowel letter?",
-            "options": ["B", "C", "A", "D"],
-            "correctAnswer": "A"
-          },
-          {
-            "id": "qe19",
-            "question": "Past of 'Buy'?",
-            "options": ["Buyed", "Bought", "Bring", "Boughted"],
-            "correctAnswer": "Bought"
-          },
-          {
-            "id": "qe20",
-            "question": "Synonym for 'Fast'?",
-            "options": ["Slow", "Quick", "Late", "Hard"],
-            "correctAnswer": "Quick"
-          }
-        ]
-      },
-      {
-        "id": "exam_geo_01",
-        "title": "Geography Challenge",
-        "teacherId": "t5",
-        "examCode": "GEO404",
-        "isActive": false,
-        "time": 18,
-        "questions": [
-          {
-            "id": "qg1",
-            "question": "Largest continent?",
-            "options": ["Africa", "Asia", "Europe", "America"],
-            "correctAnswer": "Asia"
-          },
-          {
-            "id": "qg2",
-            "question": "Capital of France?",
-            "options": ["Berlin", "Madrid", "Paris", "Rome"],
-            "correctAnswer": "Paris"
-          },
-          {
-            "id": "qg3",
-            "question": "Longest river?",
-            "options": ["Nile", "Amazon", "Yangtze", "Mississippi"],
-            "correctAnswer": "Nile"
-          },
-          {
-            "id": "qg4",
-            "question": "Country with most people?",
-            "options": ["India", "China", "USA", "Russia"],
-            "correctAnswer": "China"
-          },
-          {
-            "id": "qg5",
-            "question": "Smallest country?",
-            "options": ["Monaco", "Vatican City", "Malta", "Fiji"],
-            "correctAnswer": "Vatican City"
-          },
-          {
-            "id": "qg6",
-            "question": "Capital of Japan?",
-            "options": ["Seoul", "Beijing", "Tokyo", "Bangkok"],
-            "correctAnswer": "Tokyo"
-          },
-          {
-            "id": "qg7",
-            "question": "Continent with no deserts?",
-            "options": ["Europe", "Asia", "Antarctica", "Australia"],
-            "correctAnswer": "Europe"
-          },
-          {
-            "id": "qg8",
-            "question": "Tallest mountain?",
-            "options": ["K2", "Everest", "Fuji", "Kilimanjaro"],
-            "correctAnswer": "Everest"
-          },
-          {
-            "id": "qg9",
-            "question": "Ocean between US and Europe?",
-            "options": ["Pacific", "Atlantic", "Indian", "Arctic"],
-            "correctAnswer": "Atlantic"
-          },
-          {
-            "id": "qg10",
-            "question": "Capital of Egypt?",
-            "options": ["Lagos", "Cairo", "Nairobi", "Tunis"],
-            "correctAnswer": "Cairo"
-          },
-          {
-            "id": "qg11",
-            "question": "Largest island?",
-            "options": ["UK", "Greenland", "Madagascar", "Japan"],
-            "correctAnswer": "Greenland"
-          },
-          {
-            "id": "qg12",
-            "question": "Capital of Italy?",
-            "options": ["Venice", "Milan", "Rome", "Naples"],
-            "correctAnswer": "Rome"
-          },
-          {
-            "id": "qg13",
-            "question": "Number of continents?",
-            "options": ["5", "6", "7", "8"],
-            "correctAnswer": "7"
-          },
-          {
-            "id": "qg14",
-            "question": "Desert in Africa?",
-            "options": ["Gobi", "Sahara", "Kalahari", "Arabian"],
-            "correctAnswer": "Sahara"
-          },
-          {
-            "id": "qg15",
-            "question": "Capital of Germany?",
-            "options": ["Munich", "Berlin", "Hamburg", "Bonn"],
-            "correctAnswer": "Berlin"
-          },
-          {
-            "id": "qg16",
-            "question": "River in USA?",
-            "options": ["Thames", "Mississippi", "Danube", "Seine"],
-            "correctAnswer": "Mississippi"
-          },
-          {
-            "id": "qg17",
-            "question": "Capital of Spain?",
-            "options": ["Barcelona", "Madrid", "Seville", "Valencia"],
-            "correctAnswer": "Madrid"
-          },
-          {
-            "id": "qg18",
-            "question": "Country shape of boot?",
-            "options": ["Spain", "Italy", "Greece", "Chile"],
-            "correctAnswer": "Italy"
-          },
-          {
-            "id": "qg19",
-            "question": "Largest ocean?",
-            "options": ["Atlantic", "Indian", "Pacific", "Arctic"],
-            "correctAnswer": "Pacific"
-          },
-          {
-            "id": "qg20",
-            "question": "Canberra is capital of?",
-            "options": ["Austria", "Australia", "Canada", "USA"],
-            "correctAnswer": "Australia"
-          },
-          {
-            "id": "qg21",
-            "question": "Land of Rising Sun?",
-            "options": ["China", "Korea", "Japan", "Thailand"],
-            "correctAnswer": "Japan"
-          },
-          {
-            "id": "qg22",
-            "question": "Capital of Russia?",
-            "options": ["St Petersburg", "Moscow", "Kiev", "Minsk"],
-            "correctAnswer": "Moscow"
-          },
-          {
-            "id": "qg23",
-            "question": "Great Barrier Reef location?",
-            "options": ["USA", "Australia", "Brazil", "India"],
-            "correctAnswer": "Australia"
-          }
-        ]
-      },
-      {
-        "id": "exam_tech_01",
-        "title": "Computer Basics",
-        "teacherId": "t6",
-        "examCode": "TEC505",
-        "isActive": true,
-        "time": 25,
-        "questions": [
-          {
-            "id": "qt1",
-            "question": "Brain of the computer?",
-            "options": ["RAM", "CPU", "HDD", "Mouse"],
-            "correctAnswer": "CPU"
-          },
-          {
-            "id": "qt2",
-            "question": "Example of Web Browser?",
-            "options": ["Windows", "Word", "Chrome", "Excel"],
-            "correctAnswer": "Chrome"
-          },
-          {
-            "id": "qt3",
-            "question": "What does RAM stand for?",
-            "options": [
-              "Read Access Memory",
-              "Random Access Memory",
-              "Run All Memory",
-              "None"
-            ],
-            "correctAnswer": "Random Access Memory"
-          },
-          {
-            "id": "qt4",
-            "question": "Input device?",
-            "options": ["Monitor", "Printer", "Speaker", "Keyboard"],
-            "correctAnswer": "Keyboard"
-          },
-          {
-            "id": "qt5",
-            "question": "Output device?",
-            "options": ["Mouse", "Mic", "Monitor", "Scanner"],
-            "correctAnswer": "Monitor"
-          },
-          {
-            "id": "qt6",
-            "question": "1024 Megabytes equals?",
-            "options": ["1 KB", "1 GB", "1 TB", "1 PB"],
-            "correctAnswer": "1 GB"
-          },
-          {
-            "id": "qt7",
-            "question": "Founder of Microsoft?",
-            "options": ["Jobs", "Gates", "Musk", "Zuckerberg"],
-            "correctAnswer": "Gates"
-          },
-          {
-            "id": "qt8",
-            "question": "Language of web pages?",
-            "options": ["Python", "Java", "HTML", "C++"],
-            "correctAnswer": "HTML"
-          },
-          {
-            "id": "qt9",
-            "question": "Binary consists of?",
-            "options": ["0 and 1", "1 and 2", "0 to 9", "A to Z"],
-            "correctAnswer": "0 and 1"
-          },
-          {
-            "id": "qt10",
-            "question": "Shortcut for Copy?",
-            "options": ["Ctrl+V", "Ctrl+C", "Ctrl+X", "Ctrl+P"],
-            "correctAnswer": "Ctrl+C"
-          },
-          {
-            "id": "qt11",
-            "question": "Wireless technology?",
-            "options": ["USB", "Ethernet", "Wi-Fi", "HDMI"],
-            "correctAnswer": "Wi-Fi"
-          },
-          {
-            "id": "qt12",
-            "question": "Portable storage?",
-            "options": ["HDD", "SSD", "USB Flash", "RAM"],
-            "correctAnswer": "USB Flash"
-          },
-          {
-            "id": "qt13",
-            "question": "Android is owned by?",
-            "options": ["Apple", "Microsoft", "Google", "Samsung"],
-            "correctAnswer": "Google"
-          },
-          {
-            "id": "qt14",
-            "question": "Main circuit board?",
-            "options": ["Motherboard", "Fatherboard", "Keyboard", "Surfboard"],
-            "correctAnswer": "Motherboard"
-          },
-          {
-            "id": "qt15",
-            "question": "Extension for images?",
-            "options": [".txt", ".exe", ".jpg", ".mp3"],
-            "correctAnswer": ".jpg"
-          },
-          {
-            "id": "qt16",
-            "question": "Shortcut for Paste?",
-            "options": ["Ctrl+P", "Ctrl+V", "Ctrl+C", "Ctrl+S"],
-            "correctAnswer": "Ctrl+V"
-          },
-          {
-            "id": "qt17",
-            "question": "Which is an OS?",
-            "options": ["Dell", "HP", "Windows", "Intel"],
-            "correctAnswer": "Windows"
-          },
-          {
-            "id": "qt18",
-            "question": "Search engine?",
-            "options": ["Facebook", "Google", "WhatsApp", "Instagram"],
-            "correctAnswer": "Google"
-          },
-          {
-            "id": "qt19",
-            "question": "Used to type?",
-            "options": ["Mouse", "Screen", "Keyboard", "Printer"],
-            "correctAnswer": "Keyboard"
-          },
-          {
-            "id": "qt20",
-            "question": "Save shortcut?",
-            "options": ["Ctrl+S", "Ctrl+P", "Ctrl+O", "Ctrl+N"],
-            "correctAnswer": "Ctrl+S"
-          },
-          {
-            "id": "qt21",
-            "question": "Smallest unit of data?",
-            "options": ["Bit", "Byte", "Kilobyte", "Megabyte"],
-            "correctAnswer": "Bit"
-          },
-          {
-            "id": "qt22",
-            "question": "Symbol for email?",
-            "options": ["#", "@", "&", "$"],
-            "correctAnswer": "@"
-          }
-        ]
-      }
-    ]
+    {
+      "id": "exam_math_01",
+      "title": "Advanced Math Quiz",
+      "teacherId": "t1",
+      "examCode": "MATH99",
+      "isActive": true,
+      "time": 25,
+      "questions": [
+        {
+          "id": "qm1",
+          "question": "What is 5 + 3?",
+          "options": [
+            "6",
+            "7",
+            "8",
+            "9"
+          ],
+          "correctAnswer": "8"
+        },
+        {
+          "id": "qm2",
+          "question": "What is 12 - 4?",
+          "options": [
+            "6",
+            "7",
+            "8",
+            "9"
+          ],
+          "correctAnswer": "8"
+        },
+        {
+          "id": "qm3",
+          "question": "What is 6 × 7?",
+          "options": [
+            "36",
+            "42",
+            "48",
+            "40"
+          ],
+          "correctAnswer": "42"
+        },
+        {
+          "id": "qm4",
+          "question": "What is 81 ÷ 9?",
+          "options": [
+            "8",
+            "9",
+            "7",
+            "6"
+          ],
+          "correctAnswer": "9"
+        },
+        {
+          "id": "qm5",
+          "question": "What is 15 + 10?",
+          "options": [
+            "20",
+            "25",
+            "30",
+            "35"
+          ],
+          "correctAnswer": "25"
+        },
+        {
+          "id": "qm6",
+          "question": "What is 14 - 5?",
+          "options": [
+            "7",
+            "8",
+            "9",
+            "10"
+          ],
+          "correctAnswer": "9"
+        },
+        {
+          "id": "qm7",
+          "question": "What is 9 × 3?",
+          "options": [
+            "27",
+            "21",
+            "18",
+            "24"
+          ],
+          "correctAnswer": "27"
+        },
+        {
+          "id": "qm8",
+          "question": "What is 56 ÷ 7?",
+          "options": [
+            "6",
+            "7",
+            "8",
+            "9"
+          ],
+          "correctAnswer": "8"
+        },
+        {
+          "id": "qm9",
+          "question": "What is 100 - 45?",
+          "options": [
+            "45",
+            "55",
+            "65",
+            "60"
+          ],
+          "correctAnswer": "55"
+        },
+        {
+          "id": "qm10",
+          "question": "What is 11 + 22?",
+          "options": [
+            "31",
+            "32",
+            "33",
+            "34"
+          ],
+          "correctAnswer": "33"
+        },
+        {
+          "id": "qm11",
+          "question": "What is 8 × 8?",
+          "options": [
+            "64",
+            "56",
+            "72",
+            "81"
+          ],
+          "correctAnswer": "64"
+        },
+        {
+          "id": "qm12",
+          "question": "What is 90 ÷ 10?",
+          "options": [
+            "8",
+            "9",
+            "10",
+            "7"
+          ],
+          "correctAnswer": "9"
+        },
+        {
+          "id": "qm13",
+          "question": "What is 25 + 25?",
+          "options": [
+            "40",
+            "45",
+            "50",
+            "55"
+          ],
+          "correctAnswer": "50"
+        },
+        {
+          "id": "qm14",
+          "question": "What is 60 - 15?",
+          "options": [
+            "45",
+            "40",
+            "35",
+            "50"
+          ],
+          "correctAnswer": "45"
+        },
+        {
+          "id": "qm15",
+          "question": "What is 7 × 6?",
+          "options": [
+            "42",
+            "36",
+            "48",
+            "40"
+          ],
+          "correctAnswer": "42"
+        },
+        {
+          "id": "qm16",
+          "question": "What is 144 ÷ 12?",
+          "options": [
+            "11",
+            "12",
+            "13",
+            "10"
+          ],
+          "correctAnswer": "12"
+        },
+        {
+          "id": "qm17",
+          "question": "What is 19 + 6?",
+          "options": [
+            "24",
+            "25",
+            "26",
+            "23"
+          ],
+          "correctAnswer": "25"
+        },
+        {
+          "id": "qm18",
+          "question": "What is 50 - 18?",
+          "options": [
+            "30",
+            "32",
+            "28",
+            "35"
+          ],
+          "correctAnswer": "32"
+        },
+        {
+          "id": "qm19",
+          "question": "What is 4 × 9?",
+          "options": [
+            "36",
+            "32",
+            "40",
+            "28"
+          ],
+          "correctAnswer": "36"
+        },
+        {
+          "id": "qm20",
+          "question": "What is 63 ÷ 9?",
+          "options": [
+            "6",
+            "7",
+            "8",
+            "9"
+          ],
+          "correctAnswer": "7"
+        },
+        {
+          "id": "qm21",
+          "question": "Square root of 81?",
+          "options": [
+            "7",
+            "8",
+            "9",
+            "10"
+          ],
+          "correctAnswer": "9"
+        },
+        {
+          "id": "qm22",
+          "question": "2 to the power of 3?",
+          "options": [
+            "6",
+            "8",
+            "9",
+            "12"
+          ],
+          "correctAnswer": "8"
+        },
+        {
+          "id": "qm23",
+          "question": "What is 50% of 200?",
+          "options": [
+            "50",
+            "100",
+            "150",
+            "25"
+          ],
+          "correctAnswer": "100"
+        },
+        {
+          "id": "qm24",
+          "question": "15 x 0 = ?",
+          "options": [
+            "15",
+            "0",
+            "1",
+            "10"
+          ],
+          "correctAnswer": "0"
+        },
+        {
+          "id": "qm25",
+          "question": "How many sides in a triangle?",
+          "options": [
+            "2",
+            "3",
+            "4",
+            "5"
+          ],
+          "correctAnswer": "3"
+        },
+        {
+          "id": "qm26",
+          "question": "100 + 200",
+          "options": [
+            "300",
+            "400",
+            "250",
+            "100"
+          ],
+          "correctAnswer": "300"
+        },
+        {
+          "id": "qm27",
+          "question": "Value of Pi (approx)?",
+          "options": [
+            "3.14",
+            "2.14",
+            "4.12",
+            "3.00"
+          ],
+          "correctAnswer": "3.14"
+        },
+        {
+          "id": "qm28",
+          "question": "Next prime after 7?",
+          "options": [
+            "9",
+            "10",
+            "11",
+            "13"
+          ],
+          "correctAnswer": "11"
+        },
+        {
+          "id": "qm29",
+          "question": "Degrees in a right angle?",
+          "options": [
+            "45",
+            "90",
+            "180",
+            "360"
+          ],
+          "correctAnswer": "90"
+        },
+        {
+          "id": "qm30",
+          "question": "12 x 12",
+          "options": [
+            "122",
+            "144",
+            "124",
+            "100"
+          ],
+          "correctAnswer": "144"
+        }
+      ]
+    },
+    {
+      "id": "exam_science_01",
+      "title": "General Science",
+      "teacherId": "t2",
+      "examCode": "SCI101",
+      "isActive": true,
+      "time": 20,
+      "questions": [
+        {
+          "id": "qs1",
+          "question": "What is H2O?",
+          "options": [
+            "Oxygen",
+            "Gold",
+            "Water",
+            "Silver"
+          ],
+          "correctAnswer": "Water"
+        },
+        {
+          "id": "qs2",
+          "question": "Center of our solar system?",
+          "options": [
+            "Earth",
+            "Mars",
+            "Sun",
+            "Moon"
+          ],
+          "correctAnswer": "Sun"
+        },
+        {
+          "id": "qs3",
+          "question": "Gas we breathe in?",
+          "options": [
+            "Oxygen",
+            "Helium",
+            "Carbon",
+            "Nitrogen"
+          ],
+          "correctAnswer": "Oxygen"
+        },
+        {
+          "id": "qs4",
+          "question": "Hardest natural substance?",
+          "options": [
+            "Gold",
+            "Iron",
+            "Diamond",
+            "Silver"
+          ],
+          "correctAnswer": "Diamond"
+        },
+        {
+          "id": "qs5",
+          "question": "Planet known as Red Planet?",
+          "options": [
+            "Venus",
+            "Mars",
+            "Jupiter",
+            "Saturn"
+          ],
+          "correctAnswer": "Mars"
+        },
+        {
+          "id": "qs6",
+          "question": "Boiling point of water (C)?",
+          "options": [
+            "50",
+            "90",
+            "100",
+            "150"
+          ],
+          "correctAnswer": "100"
+        },
+        {
+          "id": "qs7",
+          "question": "Animal that eats plants only?",
+          "options": [
+            "Carnivore",
+            "Herbivore",
+            "Omnivore",
+            "Insect"
+          ],
+          "correctAnswer": "Herbivore"
+        },
+        {
+          "id": "qs8",
+          "question": "Largest organ in human body?",
+          "options": [
+            "Heart",
+            "Liver",
+            "Skin",
+            "Lungs"
+          ],
+          "correctAnswer": "Skin"
+        },
+        {
+          "id": "qs9",
+          "question": "Speed of light is faster than sound?",
+          "options": [
+            "True",
+            "False",
+            "Equal",
+            "Unknown"
+          ],
+          "correctAnswer": "True"
+        },
+        {
+          "id": "qs10",
+          "question": "How many bones in adult human?",
+          "options": [
+            "200",
+            "206",
+            "300",
+            "150"
+          ],
+          "correctAnswer": "206"
+        },
+        {
+          "id": "qs11",
+          "question": "Symbol for Oxygen?",
+          "options": [
+            "O",
+            "Ox",
+            "Og",
+            "On"
+          ],
+          "correctAnswer": "O"
+        },
+        {
+          "id": "qs12",
+          "question": "Force keeping us on ground?",
+          "options": [
+            "Magnetism",
+            "Gravity",
+            "Friction",
+            "Tension"
+          ],
+          "correctAnswer": "Gravity"
+        },
+        {
+          "id": "qs13",
+          "question": "Main organ for pumping blood?",
+          "options": [
+            "Brain",
+            "Lungs",
+            "Heart",
+            "Stomach"
+          ],
+          "correctAnswer": "Heart"
+        },
+        {
+          "id": "qs14",
+          "question": "Process plants make food?",
+          "options": [
+            "Respiration",
+            "Photosynthesis",
+            "Digestion",
+            "Growth"
+          ],
+          "correctAnswer": "Photosynthesis"
+        },
+        {
+          "id": "qs15",
+          "question": "What is the closest star to Earth?",
+          "options": [
+            "Sirius",
+            "Sun",
+            "Alpha",
+            "Pole Star"
+          ],
+          "correctAnswer": "Sun"
+        },
+        {
+          "id": "qs16",
+          "question": "Which is a mammal?",
+          "options": [
+            "Shark",
+            "Whale",
+            "Eagle",
+            "Snake"
+          ],
+          "correctAnswer": "Whale"
+        },
+        {
+          "id": "qs17",
+          "question": "Freezing point of water (C)?",
+          "options": [
+            "10",
+            "0",
+            "-10",
+            "100"
+          ],
+          "correctAnswer": "0"
+        },
+        {
+          "id": "qs18",
+          "question": "Number of planets in solar system?",
+          "options": [
+            "7",
+            "8",
+            "9",
+            "10"
+          ],
+          "correctAnswer": "8"
+        },
+        {
+          "id": "qs19",
+          "question": "What do bees make?",
+          "options": [
+            "Milk",
+            "Silk",
+            "Honey",
+            "Wool"
+          ],
+          "correctAnswer": "Honey"
+        },
+        {
+          "id": "qs20",
+          "question": "Primary source of energy?",
+          "options": [
+            "Moon",
+            "Sun",
+            "Wind",
+            "Ocean"
+          ],
+          "correctAnswer": "Sun"
+        }
+      ]
+    },
+    {
+      "id": "exam_history_01",
+      "title": "World History",
+      "teacherId": "t3",
+      "examCode": "HIS202",
+      "isActive": false,
+      "time": 15,
+      "questions": [
+        {
+          "id": "qh1",
+          "question": "Who built the Pyramids?",
+          "options": [
+            "Romans",
+            "Egyptians",
+            "Greeks",
+            "Mayans"
+          ],
+          "correctAnswer": "Egyptians"
+        },
+        {
+          "id": "qh2",
+          "question": "First President of USA?",
+          "options": [
+            "Lincoln",
+            "Washington",
+            "Kennedy",
+            "Bush"
+          ],
+          "correctAnswer": "Washington"
+        },
+        {
+          "id": "qh3",
+          "question": "Start of World War I?",
+          "options": [
+            "1914",
+            "1918",
+            "1939",
+            "1945"
+          ],
+          "correctAnswer": "1914"
+        },
+        {
+          "id": "qh4",
+          "question": "Discovered America?",
+          "options": [
+            "Columbus",
+            "Magellan",
+            "Cook",
+            "Drake"
+          ],
+          "correctAnswer": "Columbus"
+        },
+        {
+          "id": "qh5",
+          "question": "Ancient Roman language?",
+          "options": [
+            "Greek",
+            "Latin",
+            "English",
+            "French"
+          ],
+          "correctAnswer": "Latin"
+        },
+        {
+          "id": "qh6",
+          "question": "Where were the Vikings from?",
+          "options": [
+            "Spain",
+            "Scandinavia",
+            "Italy",
+            "Egypt"
+          ],
+          "correctAnswer": "Scandinavia"
+        },
+        {
+          "id": "qh7",
+          "question": "Who painted Mona Lisa?",
+          "options": [
+            "Picasso",
+            "Da Vinci",
+            "Van Gogh",
+            "Monet"
+          ],
+          "correctAnswer": "Da Vinci"
+        },
+        {
+          "id": "qh8",
+          "question": "Titanic sank in which year?",
+          "options": [
+            "1910",
+            "1912",
+            "1915",
+            "1920"
+          ],
+          "correctAnswer": "1912"
+        },
+        {
+          "id": "qh9",
+          "question": "Queen of Ancient Egypt?",
+          "options": [
+            "Cleopatra",
+            "Victoria",
+            "Elizabeth",
+            "Mary"
+          ],
+          "correctAnswer": "Cleopatra"
+        },
+        {
+          "id": "qh10",
+          "question": "Great Wall is in?",
+          "options": [
+            "Japan",
+            "India",
+            "China",
+            "Russia"
+          ],
+          "correctAnswer": "China"
+        },
+        {
+          "id": "qh11",
+          "question": "Currency of UK?",
+          "options": [
+            "Dollar",
+            "Euro",
+            "Pound",
+            "Yen"
+          ],
+          "correctAnswer": "Pound"
+        },
+        {
+          "id": "qh12",
+          "question": "Civilization of Machu Picchu?",
+          "options": [
+            "Aztec",
+            "Inca",
+            "Maya",
+            "Olmec"
+          ],
+          "correctAnswer": "Inca"
+        },
+        {
+          "id": "qh13",
+          "question": "Year of Moon Landing?",
+          "options": [
+            "1959",
+            "1969",
+            "1979",
+            "1989"
+          ],
+          "correctAnswer": "1969"
+        },
+        {
+          "id": "qh14",
+          "question": "Invented the telephone?",
+          "options": [
+            "Edison",
+            "Bell",
+            "Tesla",
+            "Marconi"
+          ],
+          "correctAnswer": "Bell"
+        },
+        {
+          "id": "qh15",
+          "question": "Napolean was emperor of?",
+          "options": [
+            "Germany",
+            "Russia",
+            "France",
+            "Italy"
+          ],
+          "correctAnswer": "France"
+        },
+        {
+          "id": "qh16",
+          "question": "Ancient Greek capital?",
+          "options": [
+            "Rome",
+            "Athens",
+            "Cairo",
+            "Sparta"
+          ],
+          "correctAnswer": "Athens"
+        },
+        {
+          "id": "qh17",
+          "question": "Statue of Liberty gift from?",
+          "options": [
+            "UK",
+            "Spain",
+            "France",
+            "Germany"
+          ],
+          "correctAnswer": "France"
+        },
+        {
+          "id": "qh18",
+          "question": "First man in space?",
+          "options": [
+            "Armstrong",
+            "Gagarin",
+            "Glenn",
+            "Aldrin"
+          ],
+          "correctAnswer": "Gagarin"
+        },
+        {
+          "id": "qh19",
+          "question": "Country of Nelson Mandela?",
+          "options": [
+            "Nigeria",
+            "Kenya",
+            "South Africa",
+            "Egypt"
+          ],
+          "correctAnswer": "South Africa"
+        },
+        {
+          "id": "qh20",
+          "question": "End of World War II?",
+          "options": [
+            "1940",
+            "1942",
+            "1945",
+            "1950"
+          ],
+          "correctAnswer": "1945"
+        },
+        {
+          "id": "qh21",
+          "question": "Who wrote Romeo and Juliet?",
+          "options": [
+            "Dickens",
+            "Shakespeare",
+            "Twain",
+            "Homer"
+          ],
+          "correctAnswer": "Shakespeare"
+        },
+        {
+          "id": "qh22",
+          "question": "Capital of ancient Rome?",
+          "options": [
+            "Milan",
+            "Venice",
+            "Rome",
+            "Naples"
+          ],
+          "correctAnswer": "Rome"
+        }
+      ]
+    },
+    {
+      "id": "exam_english_01",
+      "title": "English Grammar",
+      "teacherId": "t4",
+      "examCode": "ENG303",
+      "isActive": true,
+      "time": 10,
+      "questions": [
+        {
+          "id": "qe1",
+          "question": "Opposite of 'Hot'?",
+          "options": [
+            "Cold",
+            "Warm",
+            "Dry",
+            "Wet"
+          ],
+          "correctAnswer": "Cold"
+        },
+        {
+          "id": "qe2",
+          "question": "Past tense of 'Run'?",
+          "options": [
+            "Runned",
+            "Ran",
+            "Running",
+            "Runs"
+          ],
+          "correctAnswer": "Ran"
+        },
+        {
+          "id": "qe3",
+          "question": "Plural of 'Child'?",
+          "options": [
+            "Childs",
+            "Children",
+            "Childrens",
+            "Kid"
+          ],
+          "correctAnswer": "Children"
+        },
+        {
+          "id": "qe4",
+          "question": "Synonym for 'Happy'?",
+          "options": [
+            "Sad",
+            "Joyful",
+            "Angry",
+            "Tired"
+          ],
+          "correctAnswer": "Joyful"
+        },
+        {
+          "id": "qe5",
+          "question": "Correct spelling?",
+          "options": [
+            "Recieve",
+            "Receive",
+            "Receve",
+            "Riceive"
+          ],
+          "correctAnswer": "Receive"
+        },
+        {
+          "id": "qe6",
+          "question": "Verb in 'She sings well'?",
+          "options": [
+            "She",
+            "Sings",
+            "Well",
+            "None"
+          ],
+          "correctAnswer": "Sings"
+        },
+        {
+          "id": "qe7",
+          "question": "Past of 'Go'?",
+          "options": [
+            "Goed",
+            "Gone",
+            "Went",
+            "Going"
+          ],
+          "correctAnswer": "Went"
+        },
+        {
+          "id": "qe8",
+          "question": "Opposite of 'Big'?",
+          "options": [
+            "Huge",
+            "Large",
+            "Small",
+            "Giant"
+          ],
+          "correctAnswer": "Small"
+        },
+        {
+          "id": "qe9",
+          "question": "Plural of 'Mouse'?",
+          "options": [
+            "Mouses",
+            "Mice",
+            "Mices",
+            "Rat"
+          ],
+          "correctAnswer": "Mice"
+        },
+        {
+          "id": "qe10",
+          "question": "A group of lions is a?",
+          "options": [
+            "Pack",
+            "Herd",
+            "Pride",
+            "Flock"
+          ],
+          "correctAnswer": "Pride"
+        },
+        {
+          "id": "qe11",
+          "question": "Adjective in 'Red car'?",
+          "options": [
+            "Red",
+            "Car",
+            "Is",
+            "A"
+          ],
+          "correctAnswer": "Red"
+        },
+        {
+          "id": "qe12",
+          "question": "Rhymes with 'Cat'?",
+          "options": [
+            "Dog",
+            "Bat",
+            "Cut",
+            "Cot"
+          ],
+          "correctAnswer": "Bat"
+        },
+        {
+          "id": "qe13",
+          "question": "Correct article: '_ apple'",
+          "options": [
+            "A",
+            "An",
+            "The",
+            "None"
+          ],
+          "correctAnswer": "An"
+        },
+        {
+          "id": "qe14",
+          "question": "Past participle of 'Eat'?",
+          "options": [
+            "Ate",
+            "Eaten",
+            "Eating",
+            "Eats"
+          ],
+          "correctAnswer": "Eaten"
+        },
+        {
+          "id": "qe15",
+          "question": "Opposite of 'Win'?",
+          "options": [
+            "Lose",
+            "Victory",
+            "Game",
+            "Play"
+          ],
+          "correctAnswer": "Lose"
+        },
+        {
+          "id": "qe16",
+          "question": "Homophone for 'Sea'?",
+          "options": [
+            "See",
+            "Saw",
+            "Scene",
+            "She"
+          ],
+          "correctAnswer": "See"
+        },
+        {
+          "id": "qe17",
+          "question": "Correct spelling?",
+          "options": [
+            "Neccessary",
+            "Necessary",
+            "Necesary",
+            "Neccesary"
+          ],
+          "correctAnswer": "Necessary"
+        },
+        {
+          "id": "qe18",
+          "question": "Vowel letter?",
+          "options": [
+            "B",
+            "C",
+            "A",
+            "D"
+          ],
+          "correctAnswer": "A"
+        },
+        {
+          "id": "qe19",
+          "question": "Past of 'Buy'?",
+          "options": [
+            "Buyed",
+            "Bought",
+            "Bring",
+            "Boughted"
+          ],
+          "correctAnswer": "Bought"
+        },
+        {
+          "id": "qe20",
+          "question": "Synonym for 'Fast'?",
+          "options": [
+            "Slow",
+            "Quick",
+            "Late",
+            "Hard"
+          ],
+          "correctAnswer": "Quick"
+        }
+      ]
+    },
+    {
+      "id": "exam_geo_01",
+      "title": "Geography Challenge",
+      "teacherId": "t5",
+      "examCode": "GEO404",
+      "isActive": false,
+      "time": 18,
+      "questions": [
+        {
+          "id": "qg1",
+          "question": "Largest continent?",
+          "options": [
+            "Africa",
+            "Asia",
+            "Europe",
+            "America"
+          ],
+          "correctAnswer": "Asia"
+        },
+        {
+          "id": "qg2",
+          "question": "Capital of France?",
+          "options": [
+            "Berlin",
+            "Madrid",
+            "Paris",
+            "Rome"
+          ],
+          "correctAnswer": "Paris"
+        },
+        {
+          "id": "qg3",
+          "question": "Longest river?",
+          "options": [
+            "Nile",
+            "Amazon",
+            "Yangtze",
+            "Mississippi"
+          ],
+          "correctAnswer": "Nile"
+        },
+        {
+          "id": "qg4",
+          "question": "Country with most people?",
+          "options": [
+            "India",
+            "China",
+            "USA",
+            "Russia"
+          ],
+          "correctAnswer": "China"
+        },
+        {
+          "id": "qg5",
+          "question": "Smallest country?",
+          "options": [
+            "Monaco",
+            "Vatican City",
+            "Malta",
+            "Fiji"
+          ],
+          "correctAnswer": "Vatican City"
+        },
+        {
+          "id": "qg6",
+          "question": "Capital of Japan?",
+          "options": [
+            "Seoul",
+            "Beijing",
+            "Tokyo",
+            "Bangkok"
+          ],
+          "correctAnswer": "Tokyo"
+        },
+        {
+          "id": "qg7",
+          "question": "Continent with no deserts?",
+          "options": [
+            "Europe",
+            "Asia",
+            "Antarctica",
+            "Australia"
+          ],
+          "correctAnswer": "Europe"
+        },
+        {
+          "id": "qg8",
+          "question": "Tallest mountain?",
+          "options": [
+            "K2",
+            "Everest",
+            "Fuji",
+            "Kilimanjaro"
+          ],
+          "correctAnswer": "Everest"
+        },
+        {
+          "id": "qg9",
+          "question": "Ocean between US and Europe?",
+          "options": [
+            "Pacific",
+            "Atlantic",
+            "Indian",
+            "Arctic"
+          ],
+          "correctAnswer": "Atlantic"
+        },
+        {
+          "id": "qg10",
+          "question": "Capital of Egypt?",
+          "options": [
+            "Lagos",
+            "Cairo",
+            "Nairobi",
+            "Tunis"
+          ],
+          "correctAnswer": "Cairo"
+        },
+        {
+          "id": "qg11",
+          "question": "Largest island?",
+          "options": [
+            "UK",
+            "Greenland",
+            "Madagascar",
+            "Japan"
+          ],
+          "correctAnswer": "Greenland"
+        },
+        {
+          "id": "qg12",
+          "question": "Capital of Italy?",
+          "options": [
+            "Venice",
+            "Milan",
+            "Rome",
+            "Naples"
+          ],
+          "correctAnswer": "Rome"
+        },
+        {
+          "id": "qg13",
+          "question": "Number of continents?",
+          "options": [
+            "5",
+            "6",
+            "7",
+            "8"
+          ],
+          "correctAnswer": "7"
+        },
+        {
+          "id": "qg14",
+          "question": "Desert in Africa?",
+          "options": [
+            "Gobi",
+            "Sahara",
+            "Kalahari",
+            "Arabian"
+          ],
+          "correctAnswer": "Sahara"
+        },
+        {
+          "id": "qg15",
+          "question": "Capital of Germany?",
+          "options": [
+            "Munich",
+            "Berlin",
+            "Hamburg",
+            "Bonn"
+          ],
+          "correctAnswer": "Berlin"
+        },
+        {
+          "id": "qg16",
+          "question": "River in USA?",
+          "options": [
+            "Thames",
+            "Mississippi",
+            "Danube",
+            "Seine"
+          ],
+          "correctAnswer": "Mississippi"
+        },
+        {
+          "id": "qg17",
+          "question": "Capital of Spain?",
+          "options": [
+            "Barcelona",
+            "Madrid",
+            "Seville",
+            "Valencia"
+          ],
+          "correctAnswer": "Madrid"
+        },
+        {
+          "id": "qg18",
+          "question": "Country shape of boot?",
+          "options": [
+            "Spain",
+            "Italy",
+            "Greece",
+            "Chile"
+          ],
+          "correctAnswer": "Italy"
+        },
+        {
+          "id": "qg19",
+          "question": "Largest ocean?",
+          "options": [
+            "Atlantic",
+            "Indian",
+            "Pacific",
+            "Arctic"
+          ],
+          "correctAnswer": "Pacific"
+        },
+        {
+          "id": "qg20",
+          "question": "Canberra is capital of?",
+          "options": [
+            "Austria",
+            "Australia",
+            "Canada",
+            "USA"
+          ],
+          "correctAnswer": "Australia"
+        },
+        {
+          "id": "qg21",
+          "question": "Land of Rising Sun?",
+          "options": [
+            "China",
+            "Korea",
+            "Japan",
+            "Thailand"
+          ],
+          "correctAnswer": "Japan"
+        },
+        {
+          "id": "qg22",
+          "question": "Capital of Russia?",
+          "options": [
+            "St Petersburg",
+            "Moscow",
+            "Kiev",
+            "Minsk"
+          ],
+          "correctAnswer": "Moscow"
+        },
+        {
+          "id": "qg23",
+          "question": "Great Barrier Reef location?",
+          "options": [
+            "USA",
+            "Australia",
+            "Brazil",
+            "India"
+          ],
+          "correctAnswer": "Australia"
+        }
+      ]
+    },
+    {
+      "id": "exam_tech_01",
+      "title": "Computer Basics",
+      "teacherId": "t6",
+      "examCode": "TEC505",
+      "isActive": true,
+      "time": 25,
+      "questions": [
+        {
+          "id": "qt1",
+          "question": "Brain of the computer?",
+          "options": [
+            "RAM",
+            "CPU",
+            "HDD",
+            "Mouse"
+          ],
+          "correctAnswer": "CPU"
+        },
+        {
+          "id": "qt2",
+          "question": "Example of Web Browser?",
+          "options": [
+            "Windows",
+            "Word",
+            "Chrome",
+            "Excel"
+          ],
+          "correctAnswer": "Chrome"
+        },
+        {
+          "id": "qt3",
+          "question": "What does RAM stand for?",
+          "options": [
+            "Read Access Memory",
+            "Random Access Memory",
+            "Run All Memory",
+            "None"
+          ],
+          "correctAnswer": "Random Access Memory"
+        },
+        {
+          "id": "qt4",
+          "question": "Input device?",
+          "options": [
+            "Monitor",
+            "Printer",
+            "Speaker",
+            "Keyboard"
+          ],
+          "correctAnswer": "Keyboard"
+        },
+        {
+          "id": "qt5",
+          "question": "Output device?",
+          "options": [
+            "Mouse",
+            "Mic",
+            "Monitor",
+            "Scanner"
+          ],
+          "correctAnswer": "Monitor"
+        },
+        {
+          "id": "qt6",
+          "question": "1024 Megabytes equals?",
+          "options": [
+            "1 KB",
+            "1 GB",
+            "1 TB",
+            "1 PB"
+          ],
+          "correctAnswer": "1 GB"
+        },
+        {
+          "id": "qt7",
+          "question": "Founder of Microsoft?",
+          "options": [
+            "Jobs",
+            "Gates",
+            "Musk",
+            "Zuckerberg"
+          ],
+          "correctAnswer": "Gates"
+        },
+        {
+          "id": "qt8",
+          "question": "Language of web pages?",
+          "options": [
+            "Python",
+            "Java",
+            "HTML",
+            "C++"
+          ],
+          "correctAnswer": "HTML"
+        },
+        {
+          "id": "qt9",
+          "question": "Binary consists of?",
+          "options": [
+            "0 and 1",
+            "1 and 2",
+            "0 to 9",
+            "A to Z"
+          ],
+          "correctAnswer": "0 and 1"
+        },
+        {
+          "id": "qt10",
+          "question": "Shortcut for Copy?",
+          "options": [
+            "Ctrl+V",
+            "Ctrl+C",
+            "Ctrl+X",
+            "Ctrl+P"
+          ],
+          "correctAnswer": "Ctrl+C"
+        },
+        {
+          "id": "qt11",
+          "question": "Wireless technology?",
+          "options": [
+            "USB",
+            "Ethernet",
+            "Wi-Fi",
+            "HDMI"
+          ],
+          "correctAnswer": "Wi-Fi"
+        },
+        {
+          "id": "qt12",
+          "question": "Portable storage?",
+          "options": [
+            "HDD",
+            "SSD",
+            "USB Flash",
+            "RAM"
+          ],
+          "correctAnswer": "USB Flash"
+        },
+        {
+          "id": "qt13",
+          "question": "Android is owned by?",
+          "options": [
+            "Apple",
+            "Microsoft",
+            "Google",
+            "Samsung"
+          ],
+          "correctAnswer": "Google"
+        },
+        {
+          "id": "qt14",
+          "question": "Main circuit board?",
+          "options": [
+            "Motherboard",
+            "Fatherboard",
+            "Keyboard",
+            "Surfboard"
+          ],
+          "correctAnswer": "Motherboard"
+        },
+        {
+          "id": "qt15",
+          "question": "Extension for images?",
+          "options": [
+            ".txt",
+            ".exe",
+            ".jpg",
+            ".mp3"
+          ],
+          "correctAnswer": ".jpg"
+        },
+        {
+          "id": "qt16",
+          "question": "Shortcut for Paste?",
+          "options": [
+            "Ctrl+P",
+            "Ctrl+V",
+            "Ctrl+C",
+            "Ctrl+S"
+          ],
+          "correctAnswer": "Ctrl+V"
+        },
+        {
+          "id": "qt17",
+          "question": "Which is an OS?",
+          "options": [
+            "Dell",
+            "HP",
+            "Windows",
+            "Intel"
+          ],
+          "correctAnswer": "Windows"
+        },
+        {
+          "id": "qt18",
+          "question": "Search engine?",
+          "options": [
+            "Facebook",
+            "Google",
+            "WhatsApp",
+            "Instagram"
+          ],
+          "correctAnswer": "Google"
+        },
+        {
+          "id": "qt19",
+          "question": "Used to type?",
+          "options": [
+            "Mouse",
+            "Screen",
+            "Keyboard",
+            "Printer"
+          ],
+          "correctAnswer": "Keyboard"
+        },
+        {
+          "id": "qt20",
+          "question": "Save shortcut?",
+          "options": [
+            "Ctrl+S",
+            "Ctrl+P",
+            "Ctrl+O",
+            "Ctrl+N"
+          ],
+          "correctAnswer": "Ctrl+S"
+        },
+        {
+          "id": "qt21",
+          "question": "Smallest unit of data?",
+          "options": [
+            "Bit",
+            "Byte",
+            "Kilobyte",
+            "Megabyte"
+          ],
+          "correctAnswer": "Bit"
+        },
+        {
+          "id": "qt22",
+          "question": "Symbol for email?",
+          "options": [
+            "#",
+            "@",
+            "&",
+            "$"
+          ],
+          "correctAnswer": "@"
+        }
+      ]
+    },
+    {
+      "id": "e1771701924749",
+      "teacherId": "t1",
+      "examCode": "L3TP2V",
+      "isActive": false,
+      "title": "(HTML, CSS, JS)",
+      "time": "5",
+      "questions": [
+        {
+          "id": "qopyegqwdb",
+          "question": "ماذا يرمز اختصار HTML؟\n",
+          "options": [
+            "Hyper Text Markup Language",
+            "High Tech Machine Language",
+            "Hyper Tool Multi Language",
+            "Hyper Text Main Log"
+          ],
+          "correctAnswer": "Hyper Text Markup Language"
+        },
+        {
+          "id": "qcy8l2anwg",
+          "question": "أي وسم يستخدم لإنشاء رابط تشعبي؟",
+          "options": [
+            "<link>",
+            "<a>",
+            "<href>",
+            "<url>"
+          ],
+          "correctAnswer": "<a>"
+        },
+        {
+          "id": "q1n4lwj2l8",
+          "question": "ما هي الخاصية المستخدمة لتغيير لون الخلفية في CSS؟\n",
+          "options": [
+            "color",
+            "bg-color",
+            "background-color",
+            "fill-color"
+          ],
+          "correctAnswer": "background-color"
+        },
+        {
+          "id": "qfc724210j",
+          "question": "أي وحدة قياس في CSS تعتمد على حجم الخط في العنصر الجذري (Root)؟",
+          "options": [
+            "px",
+            "em",
+            "vw",
+            "rem"
+          ],
+          "correctAnswer": "rem"
+        },
+        {
+          "id": "q3p49exr5i",
+          "question": "كيف يتم استدعاء دالة اسمها myFunction في جافاسكريبت؟\n",
+          "options": [
+            "call myFunction()",
+            "myFunction()",
+            "run.myFunction",
+            "function myFunction()"
+          ],
+          "correctAnswer": "myFunction()"
+        },
+        {
+          "id": "qyljewcjpk",
+          "question": "ما هو ناتج typeof [] في JavaScript؟\n",
+          "options": [
+            "array",
+            "list",
+            "object",
+            "undefined"
+          ],
+          "correctAnswer": "object"
+        },
+        {
+          "id": "qoihvz7s6j",
+          "question": "أي وسم HTML يستخدم لإدراج ملف JavaScript خارجي؟\n",
+          "options": [
+            "<js>",
+            "<script>",
+            "<src>",
+            "<javascript>"
+          ],
+          "correctAnswer": "<script>"
+        },
+        {
+          "id": "qupxtcpzog",
+          "question": "أي خاصية CSS تجعل النص عريضاً (Bold)؟",
+          "options": [
+            "font-style: bold",
+            "text-thickness: bold",
+            "font-weight: bold",
+            "font-size: heavy"
+          ],
+          "correctAnswer": "font-weight: bold"
+        },
+        {
+          "id": "qp2bbudcsw",
+          "question": "كيف تكتب تعليقاً في JavaScript (سطر واحد)؟",
+          "options": [
+            "<!-- comment -->",
+            "/* comment */",
+            "// comment",
+            "# comment"
+          ],
+          "correctAnswer": "// comment"
+        },
+        {
+          "id": "q63pgijh7i",
+          "question": "أي من التالي ليس من أنواع البيانات الأساسية (Primitive Types) في JS؟\n",
+          "options": [
+            "Array",
+            "String",
+            "Boolean",
+            "Number"
+          ],
+          "correctAnswer": "Array"
+        }
+      ]
+    }
   ]
 }

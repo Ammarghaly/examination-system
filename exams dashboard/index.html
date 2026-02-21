@@ -3,14 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login</title>
+    <title>Exams</title>
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="../globalCss/global-css.css" />
   </head>
   <body>
     <nav class="navbar">
       <div class="navbar-left">
-        <button class="btn-logout">
+        <button class="btn-logout" id="btnLogout">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="18"
@@ -47,14 +47,18 @@
             <circle cx="11" cy="11" r="8"></circle>
             <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
           </svg>
-          <input type="text" placeholder="Find an exam or teacher..." />
+          <input
+            type="text"
+            id="searchInput"
+            placeholder="Find an exam or teacher..."
+          />
         </div>
       </div>
 
       <div class="navbar-right">
         <div class="user-profile">
           <div class="user-info">
-            <span class="user-name">Alex M.</span>
+            <span class="user-name"></span>
           </div>
           <img src="./images/150.jfif" alt="User Avatar" class="user-avatar" />
         </div>
@@ -63,8 +67,8 @@
     <div id="h1">
       <h1>Your Exams</h1>
     </div>
-    <div class="cards-grid">
-      <div class="add-exam-card">
+    <div class="cards-grid" id="cardsGrids">
+      <div class="add-exam-card" id="addExamCard">
         <div class="add-icon-circle">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -84,8 +88,9 @@
         <h3 class="add-title">Have an access code?</h3>
         <p class="add-desc">Add a new exam.</p>
       </div>
+      <div class="cards-grid" id="cardsGrid"></div>
     </div>
-
+    <div class="alert"></div>
     <script type="module" src="./script/script.js"></script>
   </body>
 </html>

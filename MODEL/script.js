@@ -7,19 +7,20 @@ const answerInput = document.getElementById("answerInput");
 const questionText = document.getElementById("questionText");
 const newPasswordForm = document.getElementById("newPasswordForm");
 const newPasswordInput = document.getElementById("newPasswordInput");
+const alertUI = document.querySelector(".alert");
 
 let currentUser = null;
 
 emailForm.addEventListener("submit", async (e) => {
   e.preventDefault();
-  const { data, error } = await getData(`http://localhost:3000/students`);
+  const { data, error } = await getData(`http://localhost:3000/users`);
 
   const user = data.find((u) => {
     return u.emailAddress.toLowerCase() === emailInput.value.toLowerCase();
   });
 
   if (!user) {
-    alert("Email not found ❌");
+    showError("Email not found ❌");
     return;
   }
   currentUser = user;
@@ -35,17 +36,21 @@ answerForm.addEventListener("submit", (e) => {
     answerForm.style.display = "none";
     newPasswordForm.style.display = "flex";
   } else {
-    alert("Wrong Answer ❌");
+    showError("Wrong Answer ❌");
   }
 });
 newPasswordForm.addEventListener("submit", async (e) => {
   e.preventDefault();
   const res = await update(
-    `http://localhost:3000/students/${currentUser.id}`,
-    password,
+    `http://localhost:3000/users/${currentUser.id}`,
+    "password",
     newPasswordInput.value,
   );
-  alert("Password Updated Successfully ✅");
 
-  window.open("../user login/index.html");
+  alert("Password Updated Successfully ✅");
+  window.location.href = "../user login/index.html";
 });
+function showError(message) {
+  alertUI.textContent = message;
+  alertUI.classList.add("error", "show");
+}

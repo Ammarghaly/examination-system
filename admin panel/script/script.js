@@ -143,11 +143,12 @@ form.addEventListener("submit", async (e) => {
   }
 
   showSuccess("Exam Created Successfully ✅");
-
+  
   setTimeout(() => {
     form.reset();
     document.getElementById("containerQuestion").innerHTML = "";
     alertUI.classList.remove("show", "success");
+    window.location.href='../../exams%20dashboard/index.html'
   }, 2000);
 });
 function showError(message) {

@@ -193,12 +193,19 @@ body {
     max-width: 100%;
   }
 }
-
-.cards-grid,
+#cardsGrids{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin: 0 auto 100px;
+  max-width: 1000px;
+  padding: 24px;
+}
+#cardsGrid,
 #h1 {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px,350px));
-  gap: 24px;
+  grid-template-columns: repeat(auto-fit, minmax(250px,300px));
+  gap: 20px;
   max-width: 1000px;
   margin: 0 auto;
 }
@@ -347,6 +354,8 @@ body {
     min-height: 260px;
     cursor: pointer;
     transition: all 0.3s ease;
+    width: 300px;
+    display: none;
 }
 
 .add-exam-card:hover {
