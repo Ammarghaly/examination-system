@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Examination Room</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="../globalCss/global-css.css" />
+  </head>
+  <body>
+    <div class="one">
+      <div class="timer-wrapper">
+        <svg class="progress-ring" viewBox="0 0 200 200">
+          <circle class="progress-ring__background" cx="100" cy="100" r="90" />
+          <circle class="progress-ring__circle" cx="100" cy="100" r="90" />
+        </svg>
+        <div id="timer">00:00</div>
+      </div>
+      <div id="numbers">
+        <span class="flagged">1</span><span class="answered active">2</span
+        ><span class="active flagged">3</span><span>4</span><span>5</span
+        ><span>6</span><span>7</span><span>8</span><span>9</span><span>10</span>
+        <span class="flagged">1</span><span class="answered active">2</span
+        ><span class="active flagged">3</span><span>4</span><span>5</span
+        ><span>6</span><span>7</span><span>8</span><span>9</span><span>10</span>
+      </div>
+    </div>
+    <div class="two">
+      <div class="container-question">
+        <label for="questionText">Text Question</label>
+        <div class="question-text">
+          <h2>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, ut.
+          </h2>
+        </div>
+        <hr />
+        <div class="question">
+          <div class="options">
+            <label class="option">
+              <input name="answer" type="radio" value="1" />
+              <span>Option 1 Text Here</span>
+            </label>
+
+            <label class="option">
+              <input name="answer" type="radio" value="2" />
+              <span>Option 2 Text Here</span>
+            </label>
+
+            <label class="option">
+              <input name="answer" type="radio" value="3" />
+              <span>Option 3 Text Here</span>
+            </label>
+
+            <label class="option">
+              <input name="answer" type="radio" value="4" />
+              <span>Option 4 Text Here</span>
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="alert"></div>
+    <script type="module" src="./script/script.js"></script>
+  </body>
+</html>
