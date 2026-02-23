@@ -25,9 +25,9 @@ if (userString) {
     addExamCard.style.display = "block";
   }
 }
-addExamCard.addEventListener('click',()=>{
+addExamCard.addEventListener("click", () => {
   window.location.href = "../../admin panel/index.html";
-})
+});
 
 if (btnLogout) {
   btnLogout.addEventListener("click", () => {
@@ -50,7 +50,7 @@ function renderExams(examsList) {
     const subjectName = exam.title || "EXAM";
 
     const examHTML = `
-      <div class="exam-card ${colorClass}">
+      <div class="exam-card ${colorClass}" onclick="getExam('${exam.id}')">
         <div class="card-header">
           <span class="subject-tag">${subjectName}</span>
         </div>
@@ -108,4 +108,11 @@ document.addEventListener("DOMContentLoaded", async () => {
 function showError(message) {
   alertUI.textContent = message;
   alertUI.classList.add("error", "show");
+}
+
+window.getExam = getExam;
+
+function getExam(id) {
+  const targetUrl = `../../examination room/index.html?id=${encodeURIComponent(id)}`;
+  window.location.href = targetUrl;
 }

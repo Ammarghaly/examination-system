@@ -148,11 +148,6 @@ body {
   .navbar {
     padding: 15px 20px;
   }
-
-  .user-info {
-    display: none;
-  }
-
   .navbar-right {
     gap: 15px;
   }
@@ -207,10 +202,19 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(250px,300px));
   gap: 20px;
   max-width: 1000px;
-  margin: 0 auto;
+  margin: 0 auto ;
+}
+#cardsGrid{
+  justify-content: center;  
+}
+@media  (max-width:600px){
+  #cardsGrid{
+     grid-template-columns:1fr;
+  }
 }
 #h1{
     margin: 30px auto;
+    padding-left: 24px;
 }
 .card-green {
   --bg-color: #e5f7f0;
@@ -391,5 +395,5 @@ body {
     font-size: 14px;
     color: #888;
     line-height: 1.5;
-    max-width: 220px;/
+    max-width: 220px;
 }

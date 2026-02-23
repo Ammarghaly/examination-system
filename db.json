@@ -7,7 +7,7 @@
       "emailAddress": "admin@mail.com",
       "password": "123456",
       "question": "123",
-      "anther": "123",
+      "answer": "123",
       "role": "admin"
     },
     {
@@ -17,13 +17,13 @@
       "emailAddress": "ammar@gmail.com",
       "password": "123123",
       "question": "123",
-      "anther": "123",
+      "answer": "123",
       "role": "student"
     }
   ],
   "exams": [
     {
-      "id": "exam_math_01",
+      "id": "e1",
       "title": "Advanced Math Quiz",
       "teacherId": "t1",
       "examCode": "MATH99",

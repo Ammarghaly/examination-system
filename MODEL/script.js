@@ -31,7 +31,7 @@ emailForm.addEventListener("submit", async (e) => {
 answerForm.addEventListener("submit", (e) => {
   e.preventDefault();
   if (
-    currentUser.anther.toLowerCase() === answerInput.value.trim().toLowerCase()
+    currentUser.answer.toLowerCase() === answerInput.value.trim().toLowerCase()
   ) {
     answerForm.style.display = "none";
     newPasswordForm.style.display = "flex";
@@ -48,7 +48,7 @@ newPasswordForm.addEventListener("submit", async (e) => {
   );
 
   alert("Password Updated Successfully ✅");
-  window.location.href = "../user login/index.html";
+  window.location.href = "../user%20login/index.html";
 });
 function showError(message) {
   alertUI.textContent = message;
