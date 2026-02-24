@@ -50,3 +50,17 @@ export async function update(url, key, keyValue) {
     return { data: null, error: error.message };
   }
 }
+
+export async function deleteData(url) {
+  try {
+    const res = await fetch(url, {
+      method: "DELETE",
+    });
+    if (!res.ok) {
+      throw new Error(`HTTP error! Status: ${res.status}`);
+    }
+    return { error: null };
+  } catch (error) {
+    return { error: error.message };
+  }
+}

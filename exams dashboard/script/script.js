@@ -50,7 +50,7 @@ function renderExams(examsList) {
     const subjectName = exam.title || "EXAM";
 
     const examHTML = `
-      <div class="exam-card ${colorClass}" onclick="getExam('${exam.id}')">
+      <div class="exam-card ${!exam.isActive ? "active" : ""} ${colorClass}" data-id="${exam.id}">
         <div class="card-header">
           <span class="subject-tag">${subjectName}</span>
         </div>
@@ -85,7 +85,20 @@ function renderExams(examsList) {
       </div>`;
     cardsGrid.insertAdjacentHTML("beforeend", examHTML);
   });
+  document.querySelectorAll(".exam-card").forEach((card) => {
+    card.addEventListener("click", () => {
+      if (card.classList.contains("active")) {
+        alertUI.innerHTML = "This Exam is not currently available❌";
+        alertUI.classList.remove("success");
+        alertUI.classList.add("error", "show");
+        return;
+      }
+      getExam(card.dataset.id);
+    });
+  });
 }
+
+
 searchInput.addEventListener("input", (e) => {
   const searchTerm = e.target.value.toLowerCase().trim();
   const filteredExams = allExams.filter((exam) =>

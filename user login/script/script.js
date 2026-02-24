@@ -6,17 +6,16 @@ const loginBtn = document.querySelector("#login");
 const alertUI = document.querySelector(".alert");
 
 
-
-
-const userString = localStorage.getItem("user");
-if (userString) {
-  window.open("../../exams dashboard/index.html", "_self");
-}
-
-
 loginBtn.addEventListener("click", async (e) => {
   e.preventDefault();
   alertUI.classList.remove("success", "error", "show");
+
+  if (!inputEmail.value.trim() || !inputPassword.value.trim()) {
+    alertUI.innerHTML = "Please fill in all fields ❌";
+    alertUI.classList.add("error", "show");
+    return;
+  }
+
   const { data, error } = await getData("http://localhost:3000/users");
 
   if (error) {
@@ -34,14 +33,16 @@ loginBtn.addEventListener("click", async (e) => {
 
   if (user) {
     alertUI.innerHTML = "Login Successful ✅";
-    alertUI.classList.add("success");
+    alertUI.classList.add("success", "show");
     localStorage.setItem("user", JSON.stringify(user));
+    window.location.replace("../../exams dashboard/index.html");
   } else {
     alertUI.innerHTML = "Invalid Email or Password ❌";
-    alertUI.classList.add("error");
+    alertUI.classList.add("error", "show");
   }
-
-  alertUI.classList.add("show");
-
-   window.open("../../exams dashboard/index.html", "_self");
 });
+
+const userString = localStorage.getItem("user");
+if (userString) {
+  window.location.replace("../../exams dashboard/index.html");
+}

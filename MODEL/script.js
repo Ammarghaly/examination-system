@@ -41,16 +41,28 @@ answerForm.addEventListener("submit", (e) => {
 });
 newPasswordForm.addEventListener("submit", async (e) => {
   e.preventDefault();
-  const res = await update(
-    `http://localhost:3000/users/${currentUser.id}`,
-    "password",
-    newPasswordInput.value,
-  );
 
-  alert("Password Updated Successfully ✅");
-  window.location.href = "../user%20login/index.html";
+  if (!newPasswordInput.value.trim()) {
+    showError("Password cannot be empty ❌");
+    return;
+  }
+
+  try {
+    const res = await update(
+      `http://localhost:3000/users/${currentUser.id}`,
+      "password",
+      newPasswordInput.value,
+    );
+    window.location.replace("http://127.0.0.1:5500/user%20login/index.html");
+  } catch (err) {
+    showError(err);
+  }
 });
 function showError(message) {
   alertUI.textContent = message;
   alertUI.classList.add("error", "show");
+}
+const userString = localStorage.getItem("user");
+if (userString) {
+  window.location.replace("../../exams dashboard/index.html");
 }

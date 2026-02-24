@@ -15,7 +15,7 @@
       "firstName": "عمار",
       "listName": "جاد",
       "emailAddress": "ammar@gmail.com",
-      "password": "123123",
+      "password": "123456",
       "question": "123",
       "answer": "123",
       "role": "student"
@@ -23,352 +23,12 @@
   ],
   "exams": [
     {
-      "id": "e1",
-      "title": "Advanced Math Quiz",
-      "teacherId": "t1",
-      "examCode": "MATH99",
-      "isActive": true,
-      "time": 25,
-      "questions": [
-        {
-          "id": "qm1",
-          "question": "What is 5 + 3?",
-          "options": [
-            "6",
-            "7",
-            "8",
-            "9"
-          ],
-          "correctAnswer": "8"
-        },
-        {
-          "id": "qm2",
-          "question": "What is 12 - 4?",
-          "options": [
-            "6",
-            "7",
-            "8",
-            "9"
-          ],
-          "correctAnswer": "8"
-        },
-        {
-          "id": "qm3",
-          "question": "What is 6 × 7?",
-          "options": [
-            "36",
-            "42",
-            "48",
-            "40"
-          ],
-          "correctAnswer": "42"
-        },
-        {
-          "id": "qm4",
-          "question": "What is 81 ÷ 9?",
-          "options": [
-            "8",
-            "9",
-            "7",
-            "6"
-          ],
-          "correctAnswer": "9"
-        },
-        {
-          "id": "qm5",
-          "question": "What is 15 + 10?",
-          "options": [
-            "20",
-            "25",
-            "30",
-            "35"
-          ],
-          "correctAnswer": "25"
-        },
-        {
-          "id": "qm6",
-          "question": "What is 14 - 5?",
-          "options": [
-            "7",
-            "8",
-            "9",
-            "10"
-          ],
-          "correctAnswer": "9"
-        },
-        {
-          "id": "qm7",
-          "question": "What is 9 × 3?",
-          "options": [
-            "27",
-            "21",
-            "18",
-            "24"
-          ],
-          "correctAnswer": "27"
-        },
-        {
-          "id": "qm8",
-          "question": "What is 56 ÷ 7?",
-          "options": [
-            "6",
-            "7",
-            "8",
-            "9"
-          ],
-          "correctAnswer": "8"
-        },
-        {
-          "id": "qm9",
-          "question": "What is 100 - 45?",
-          "options": [
-            "45",
-            "55",
-            "65",
-            "60"
-          ],
-          "correctAnswer": "55"
-        },
-        {
-          "id": "qm10",
-          "question": "What is 11 + 22?",
-          "options": [
-            "31",
-            "32",
-            "33",
-            "34"
-          ],
-          "correctAnswer": "33"
-        },
-        {
-          "id": "qm11",
-          "question": "What is 8 × 8?",
-          "options": [
-            "64",
-            "56",
-            "72",
-            "81"
-          ],
-          "correctAnswer": "64"
-        },
-        {
-          "id": "qm12",
-          "question": "What is 90 ÷ 10?",
-          "options": [
-            "8",
-            "9",
-            "10",
-            "7"
-          ],
-          "correctAnswer": "9"
-        },
-        {
-          "id": "qm13",
-          "question": "What is 25 + 25?",
-          "options": [
-            "40",
-            "45",
-            "50",
-            "55"
-          ],
-          "correctAnswer": "50"
-        },
-        {
-          "id": "qm14",
-          "question": "What is 60 - 15?",
-          "options": [
-            "45",
-            "40",
-            "35",
-            "50"
-          ],
-          "correctAnswer": "45"
-        },
-        {
-          "id": "qm15",
-          "question": "What is 7 × 6?",
-          "options": [
-            "42",
-            "36",
-            "48",
-            "40"
-          ],
-          "correctAnswer": "42"
-        },
-        {
-          "id": "qm16",
-          "question": "What is 144 ÷ 12?",
-          "options": [
-            "11",
-            "12",
-            "13",
-            "10"
-          ],
-          "correctAnswer": "12"
-        },
-        {
-          "id": "qm17",
-          "question": "What is 19 + 6?",
-          "options": [
-            "24",
-            "25",
-            "26",
-            "23"
-          ],
-          "correctAnswer": "25"
-        },
-        {
-          "id": "qm18",
-          "question": "What is 50 - 18?",
-          "options": [
-            "30",
-            "32",
-            "28",
-            "35"
-          ],
-          "correctAnswer": "32"
-        },
-        {
-          "id": "qm19",
-          "question": "What is 4 × 9?",
-          "options": [
-            "36",
-            "32",
-            "40",
-            "28"
-          ],
-          "correctAnswer": "36"
-        },
-        {
-          "id": "qm20",
-          "question": "What is 63 ÷ 9?",
-          "options": [
-            "6",
-            "7",
-            "8",
-            "9"
-          ],
-          "correctAnswer": "7"
-        },
-        {
-          "id": "qm21",
-          "question": "Square root of 81?",
-          "options": [
-            "7",
-            "8",
-            "9",
-            "10"
-          ],
-          "correctAnswer": "9"
-        },
-        {
-          "id": "qm22",
-          "question": "2 to the power of 3?",
-          "options": [
-            "6",
-            "8",
-            "9",
-            "12"
-          ],
-          "correctAnswer": "8"
-        },
-        {
-          "id": "qm23",
-          "question": "What is 50% of 200?",
-          "options": [
-            "50",
-            "100",
-            "150",
-            "25"
-          ],
-          "correctAnswer": "100"
-        },
-        {
-          "id": "qm24",
-          "question": "15 x 0 = ?",
-          "options": [
-            "15",
-            "0",
-            "1",
-            "10"
-          ],
-          "correctAnswer": "0"
-        },
-        {
-          "id": "qm25",
-          "question": "How many sides in a triangle?",
-          "options": [
-            "2",
-            "3",
-            "4",
-            "5"
-          ],
-          "correctAnswer": "3"
-        },
-        {
-          "id": "qm26",
-          "question": "100 + 200",
-          "options": [
-            "300",
-            "400",
-            "250",
-            "100"
-          ],
-          "correctAnswer": "300"
-        },
-        {
-          "id": "qm27",
-          "question": "Value of Pi (approx)?",
-          "options": [
-            "3.14",
-            "2.14",
-            "4.12",
-            "3.00"
-          ],
-          "correctAnswer": "3.14"
-        },
-        {
-          "id": "qm28",
-          "question": "Next prime after 7?",
-          "options": [
-            "9",
-            "10",
-            "11",
-            "13"
-          ],
-          "correctAnswer": "11"
-        },
-        {
-          "id": "qm29",
-          "question": "Degrees in a right angle?",
-          "options": [
-            "45",
-            "90",
-            "180",
-            "360"
-          ],
-          "correctAnswer": "90"
-        },
-        {
-          "id": "qm30",
-          "question": "12 x 12",
-          "options": [
-            "122",
-            "144",
-            "124",
-            "100"
-          ],
-          "correctAnswer": "144"
-        }
-      ]
-    },
-    {
       "id": "exam_science_01",
       "title": "General Science",
       "teacherId": "t2",
       "examCode": "SCI101",
       "isActive": true,
-      "time": 20,
+      "time": 12,
       "questions": [
         {
           "id": "qs1",
@@ -597,8 +257,8 @@
       "title": "World History",
       "teacherId": "t3",
       "examCode": "HIS202",
-      "isActive": false,
-      "time": 15,
+      "isActive": true,
+      "time": 22,
       "questions": [
         {
           "id": "qh1",
@@ -849,7 +509,7 @@
       "title": "English Grammar",
       "teacherId": "t4",
       "examCode": "ENG303",
-      "isActive": true,
+      "isActive": false,
       "time": 10,
       "questions": [
         {
@@ -1593,9 +1253,9 @@
       "id": "e1771701924749",
       "teacherId": "t1",
       "examCode": "L3TP2V",
-      "isActive": false,
+      "isActive": true,
       "title": "(HTML, CSS, JS)",
-      "time": "5",
+      "time": 15,
       "questions": [
         {
           "id": "qopyegqwdb",
