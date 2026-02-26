@@ -7,6 +7,13 @@ const userName = document.querySelector(".user-name");
 const btnLogout = document.getElementById("btnLogout");
 const mobileToggle = document.getElementById("mobileToggle");
 const navLinks = document.getElementById("navLinks");
+const promptBox = document.getElementById("promptBox");
+const promptInput = document.getElementById("promptInput");
+const promptYes = document.getElementById("promptYes");
+const promptCancel = document.getElementById("promptCancel");
+const confirmBox = document.getElementById("confirmBox");
+const confirmYes = document.getElementById("confirmYes");
+const confirmCancel = document.getElementById("confirmCancel");
 
 mobileToggle.addEventListener("click", () => {
   navLinks.classList.toggle("active");
@@ -108,30 +115,64 @@ function showError(message) {
   alertUI.textContent = message;
   alertUI.classList.add("error", "show");
 }
+function showSuccess(message) {
+  alertUI.textContent = message;
+  alertUI.classList.add("success", "show");
+}
 
-window.deleteExam = async (id) => {
-  if (!confirm("Are you sure you want to delete this exam?")) return;
+function deleteExam(id) {
+  confirmBox.classList.add("active");
+  confirmYes.addEventListener("click", async () => {
+    const { error } = await deleteData(`http://localhost:3000/exams/${id}`);
+    if (error) {
+      showError("Exam deletion failed❌");
+      return;
+    }
 
-  const { error } = await deleteData(`http://localhost:3000/exams/${id}`);
+    location.reload();
+  });
+}
 
-  if (error) {
-    showError("Exam deletion failed❌");
-    return;
-  }
+confirmCancel.addEventListener("click", () => {
+  confirmBox.classList.remove("active");
+});
 
-  location.reload();
-};
 window.editTimer = editTimer;
 window.toggleExam = toggleExam;
+window.deleteExam = deleteExam;
 
-async function editTimer(id) {
-  const Time = prompt();
-  const { data, error } = await update(
-    `http://localhost:3000/exams/${id}`,
-    "time",
-    Number(Time),
-  );
+function editTimer(id) {
+  promptBox.classList.add("active");
+  promptInput.value = "";
+  promptInput.focus();
+
+  promptYes.addEventListener("click", async () => {
+    const timeValue = Number(promptInput.value);
+
+    if (!timeValue || timeValue <= 0) {
+      showError("Please enter a valid time");
+      return;
+    }
+
+    try {
+      const { data, error } = await update(
+        `http://localhost:3000/exams/${id}`,
+        "time",
+        timeValue,
+      );
+
+      promptBox.classList.remove("active");
+      showSuccess("Timer updated successfully");
+    } catch (err) {
+      showError(err);
+    }
+  });
+
+  promptCancel.addEventListener("click", () => {
+    promptBox.classList.remove("active");
+  });
 }
+
 async function toggleExam(id, isActive) {
   const { data, error } = await update(
     `http://localhost:3000/exams/${id}`,

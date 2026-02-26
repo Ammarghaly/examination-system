@@ -1,4 +1,4 @@
-import { getData } from "../../Apis.js";
+import { getData, postForm } from "../../Apis.js";
 
 const timerElement = document.getElementById("timer");
 const numbers = document.getElementById("numbers");
@@ -11,20 +11,52 @@ const prevBtn = document.getElementById("prevBtn");
 const nextBtn = document.getElementById("nextBtn");
 const flagBtn = document.getElementById("flagBtn");
 const optionsContainer = document.querySelector(".options");
+const confirmBox = document.getElementById("confirmBox");
+const confirmYes = document.getElementById("confirmYes");
+const confirmCancel = document.getElementById("confirmCancel");
 
-const idExam =location.search;
+const idExam = location.search;
 const urlParams = new URLSearchParams(idExam);
 const Id = urlParams.get("id");
 
 let totalSeconds;
 let originalSeconds;
 let timerInterval;
+let examSubmitted = false;
 
 const radius = 90;
 const circumference = 2 * Math.PI * radius;
 
 circle.style.strokeDasharray = circumference;
 circle.style.strokeDashoffset = 0;
+
+async function finishExam() {
+  if (examSubmitted) return;
+  examSubmitted = true;
+
+  clearInterval(timerInterval);
+  const score = calculateScore();
+  const user = JSON.parse(localStorage.getItem("user"));
+  const resultData = {
+    userId: user.id,
+    examId: Id,
+    score: score,
+    total: questions.length,
+    submittedAt: new Date().toISOString(),
+  };
+
+  try {
+    const { data } = await postForm(
+      `http://localhost:3000/results`,
+      resultData,
+    );
+
+    window.location.href = `../../detailed results/index.html?id=${data.id}`;
+  } catch (err) {
+    showError("Failed to submit exam");
+  }
+  examSubmitted = false;
+}
 
 function startExamTimer(minutes) {
   originalSeconds = minutes * 60;
@@ -39,7 +71,14 @@ function startExamTimer(minutes) {
 
     if (totalSeconds <= 0) {
       clearInterval(timerInterval);
-      showError("Time is up ⏳");
+      showError("Time is up! Submitting exam...");
+      nextBtn.disabled = true;
+      prevBtn.disabled = true;
+      flagBtn.disabled = true;
+
+      setTimeout(() => {
+        finishExam();
+      }, 2000);
     }
   }, 1000);
 }
@@ -70,24 +109,27 @@ function showError(message) {
   alertUI.classList.add("error", "show");
 }
 
-function showSuccess(message) {
-  alertUI.textContent = message;
-  alertUI.classList.add("success", "show");
-}
-
 /////////////////////////////////////////////////////////////////////////
 let index = 0;
 let answers = [];
 let questions = [];
 
+function shuffleArray(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+  return array;
+}
+
 window.addEventListener("DOMContentLoaded", async () => {
   try {
     const { data, error } = await getData(`http://localhost:3000/exams/${Id}`);
     if (data) {
-      questions = [...data.questions];
+      questions = shuffleArray([...data.questions]);
       if (data.questions) {
         numbers.innerHTML = "";
-        data.questions.forEach((ele, i) => {
+        questions.forEach((ele, i) => {
           numbers.insertAdjacentHTML("beforeend", `<span>${i + 1}</span>`);
         });
       }
@@ -102,8 +144,26 @@ window.addEventListener("DOMContentLoaded", async () => {
   }
 });
 
+// nextBtn.addEventListener("click", () => {
+//   if (index < questions.length - 1) {
+//     index++;
+//     showQuestion();
+//   }
+// });
+
+confirmYes.addEventListener("click", async () => {
+  confirmBox.classList.remove("active");
+  finishExam();
+});
+
+confirmCancel.addEventListener("click", () => {
+  confirmBox.classList.remove("active");
+});
+
 nextBtn.addEventListener("click", () => {
-  if (index < questions.length - 1) {
+  if (index === questions.length - 1) {
+    confirmBox.classList.add("active");
+  } else {
     index++;
     showQuestion();
   }
@@ -118,7 +178,7 @@ prevBtn.addEventListener("click", () => {
 
 function showQuestion() {
   const currentQuestion = questions[index];
-  const currentOptions = currentQuestion.options;
+  const currentOptions = shuffleArray([...currentQuestion.options]);
 
   questionText.textContent = currentQuestion.question;
 
@@ -143,6 +203,7 @@ function showQuestion() {
   }
   option.forEach((ele, i) => {
     ele.textContent = currentOptions[i];
+    radioInputs[i].value = currentOptions[i];
   });
   updateSpans();
 }
@@ -184,3 +245,15 @@ numbers.addEventListener("click", (e) => {
     updateSpans();
   }
 });
+
+function calculateScore() {
+  let score = 0;
+
+  questions.forEach((q, i) => {
+    if (String(answers[i]) === String(q.correctAnswer)) {
+      score++;
+    }
+  });
+
+  return score;
+}

@@ -3,11 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Results</title>
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="../globalCss/global-css.css">
 </head>
-<body>
-    <script src="./script/script.js"></script>
-</body>
+ <body>
+    <div class="card">
+      <h2> Test result</h2>
+
+      <div class="circle-progress">
+        <svg width="170" height="170">
+          <circle class="bg" cx="85" cy="85" r="70"></circle>
+          <circle class="progress" cx="85" cy="85" r="70"></circle>
+        </svg>
+        <div class="percentage" id="percentage">0%</div>
+      </div>
+
+      <button class="btn retry">Re-examination</button>
+
+      <button class="btn back">
+       Return to the exams page
+      </button>
+    </div>
+    <script type="module" src="./script/script.js"></script>
+  </body>
 </html>

@@ -19,6 +19,36 @@
       "question": "123",
       "answer": "123",
       "role": "student"
+    },
+    {
+      "id": "c086",
+      "firstName": "Ammar ",
+      "listName": "Ghaly",
+      "emailAddress": "Amar@as.as",
+      "password": "123456",
+      "question": "When was Prophet Muhammad born?",
+      "answer": "571",
+      "role": "student"
+    },
+    {
+      "id": "c54a",
+      "firstName": "ahmed",
+      "listName": "gamal",
+      "emailAddress": "ahamed@gmail.cim",
+      "password": "77777777",
+      "question": "dodo",
+      "answer": "kok",
+      "role": "student"
+    },
+    {
+      "id": "38ae",
+      "firstName": "ahmed",
+      "listName": "gamal",
+      "emailAddress": "ahmed@gmail.cim",
+      "password": "7777777",
+      "question": "dodo",
+      "answer": "kok",
+      "role": "student"
     }
   ],
   "exams": [
@@ -257,8 +287,8 @@
       "title": "World History",
       "teacherId": "t3",
       "examCode": "HIS202",
-      "isActive": true,
-      "time": 22,
+      "isActive": false,
+      "time": 20,
       "questions": [
         {
           "id": "qh1",
@@ -509,8 +539,8 @@
       "title": "English Grammar",
       "teacherId": "t4",
       "examCode": "ENG303",
-      "isActive": false,
-      "time": 10,
+      "isActive": true,
+      "time": 15,
       "questions": [
         {
           "id": "qe1",
@@ -1368,6 +1398,152 @@
           "correctAnswer": "Array"
         }
       ]
+    }
+  ],
+  "results": [
+    {
+      "id": "afc0",
+      "userId": "c086",
+      "examId": "exam_english_01",
+      "score": 0,
+      "total": 20,
+      "submittedAt": "2026-02-25T12:44:00.843Z"
+    },
+    {
+      "id": "bf1b",
+      "userId": "c086",
+      "examId": "exam_english_01",
+      "score": 0,
+      "total": 20,
+      "submittedAt": "2026-02-25T12:44:19.027Z"
+    },
+    {
+      "id": "0add",
+      "userId": "c086",
+      "examId": "exam_science_01",
+      "score": 0,
+      "total": 20,
+      "submittedAt": "2026-02-25T13:00:01.312Z"
+    },
+    {
+      "id": "a092",
+      "userId": "c086",
+      "examId": "e1771701924749",
+      "score": 0,
+      "total": 10,
+      "submittedAt": "2026-02-25T13:02:57.742Z"
+    },
+    {
+      "id": "9227",
+      "userId": "c086",
+      "examId": "e1771701924749",
+      "score": 0,
+      "total": 10,
+      "submittedAt": "2026-02-25T13:05:20.262Z"
+    },
+    {
+      "id": "9290",
+      "userId": "c086",
+      "examId": "e1771701924749",
+      "score": 0,
+      "total": 10,
+      "submittedAt": "2026-02-25T13:19:37.134Z"
+    },
+    {
+      "id": "ed3b",
+      "userId": "c086",
+      "examId": "exam_history_01",
+      "score": 0,
+      "total": 22,
+      "submittedAt": "2026-02-25T13:22:51.258Z"
+    },
+    {
+      "id": "c4f7",
+      "userId": "c086",
+      "examId": "exam_history_01",
+      "score": 0,
+      "total": 22,
+      "submittedAt": "2026-02-25T13:34:39.306Z"
+    },
+    {
+      "id": "5fa0",
+      "userId": "c086",
+      "examId": "e1771701924749",
+      "score": 8,
+      "total": 10,
+      "submittedAt": "2026-02-25T13:35:17.577Z"
+    },
+    {
+      "id": "2c52",
+      "userId": "c086",
+      "examId": "e1771701924749",
+      "score": 1,
+      "total": 10,
+      "submittedAt": "2026-02-25T14:10:05.910Z"
+    },
+    {
+      "id": "a9d9",
+      "userId": "c086",
+      "examId": "exam_history_01",
+      "score": 0,
+      "total": 22,
+      "submittedAt": "2026-02-25T18:39:02.390Z"
+    },
+    {
+      "id": "2def",
+      "userId": "c086",
+      "examId": "exam_history_01",
+      "score": 1,
+      "total": 22,
+      "submittedAt": "2026-02-25T19:08:42.243Z"
+    },
+    {
+      "id": "4b11",
+      "userId": "c086",
+      "examId": "exam_english_01",
+      "score": 3,
+      "total": 20,
+      "submittedAt": "2026-02-25T19:12:27.767Z"
+    },
+    {
+      "id": "5047",
+      "userId": "c086",
+      "examId": "exam_english_01",
+      "score": 0,
+      "total": 20,
+      "submittedAt": "2026-02-25T19:14:29.575Z"
+    },
+    {
+      "id": "9366",
+      "userId": "c086",
+      "examId": "exam_english_01",
+      "score": 0,
+      "total": 20,
+      "submittedAt": "2026-02-25T19:21:03.603Z"
+    },
+    {
+      "id": "eca6",
+      "userId": "c086",
+      "examId": "exam_english_01",
+      "score": 0,
+      "total": 20,
+      "submittedAt": "2026-02-25T19:22:48.059Z"
+    },
+    {
+      "id": "43c6",
+      "userId": "38ae",
+      "examId": "exam_science_01",
+      "score": 1,
+      "total": 20,
+      "submittedAt": "2026-02-26T06:56:06.692Z"
+    },
+    {
+      "id": "2f2b",
+      "userId": "38ae",
+      "examId": "e1771701924749",
+      "score": 4,
+      "total": 10,
+      "submittedAt": "2026-02-26T06:58:48.225Z"
     }
   ]
 }
