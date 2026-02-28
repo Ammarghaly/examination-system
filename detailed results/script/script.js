@@ -7,7 +7,6 @@ const idExam = location.search;
 const urlParams = new URLSearchParams(idExam);
 const Id = urlParams.get("id");
 
-
 window.history.pushState(null, null, window.location.href);
 window.addEventListener("popstate", function (event) {
   window.location.replace("../../exams%20dashboard/index.html");
@@ -46,7 +45,7 @@ window.addEventListener("DOMContentLoaded", async () => {
   }
 
   btnRetry.addEventListener("click", () => {
-    window.location.replace(`../../detailed results/index.html?id=${data.id}`);
+    window.location.replace(`../../examination room/index.html?id=${data.id}`);
   });
 
   btnBack.addEventListener("click", () => {

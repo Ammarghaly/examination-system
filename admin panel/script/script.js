@@ -131,6 +131,7 @@ form.addEventListener("submit", async (e) => {
     time: time,
     questions: questions,
   };
+  
 
   const { data, error } = await postForm(
     "http://localhost:3000/exams",

@@ -15,7 +15,7 @@
       "firstName": "عمار",
       "listName": "جاد",
       "emailAddress": "ammar@gmail.com",
-      "password": "123456",
+      "password": "123123",
       "question": "123",
       "answer": "123",
       "role": "student"
@@ -49,6 +49,16 @@
       "question": "dodo",
       "answer": "kok",
       "role": "student"
+    },
+    {
+      "id": "2136",
+      "firstName": "mohame",
+      "listName": "gamal",
+      "emailAddress": "mohame@as.as",
+      "password": "123123",
+      "question": "dodo",
+      "answer": "sasa",
+      "role": "student"
     }
   ],
   "exams": [
@@ -57,7 +67,7 @@
       "title": "General Science",
       "teacherId": "t2",
       "examCode": "SCI101",
-      "isActive": true,
+      "isActive": false,
       "time": 12,
       "questions": [
         {
@@ -1544,6 +1554,30 @@
       "score": 4,
       "total": 10,
       "submittedAt": "2026-02-26T06:58:48.225Z"
+    },
+    {
+      "id": "0220",
+      "userId": "a1",
+      "examId": "exam_english_01",
+      "score": 1,
+      "total": 20,
+      "submittedAt": "2026-02-26T13:39:31.934Z"
+    },
+    {
+      "id": "5ba8",
+      "userId": "2136",
+      "examId": "exam_english_01",
+      "score": 0,
+      "total": 20,
+      "submittedAt": "2026-02-28T19:04:14.440Z"
+    },
+    {
+      "id": "8a88",
+      "userId": "2136",
+      "examId": "exam_english_01",
+      "score": 2,
+      "total": 20,
+      "submittedAt": "2026-02-28T19:04:44.055Z"
     }
   ]
 }

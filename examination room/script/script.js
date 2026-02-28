@@ -178,9 +178,13 @@ prevBtn.addEventListener("click", () => {
 
 function showQuestion() {
   const currentQuestion = questions[index];
-  const currentOptions = shuffleArray([...currentQuestion.options]);
+  const currentOptions = currentQuestion.options;
 
   questionText.textContent = currentQuestion.question;
+  option.forEach((ele, i) => {
+    ele.textContent = currentOptions[i];
+    radioInputs[i].value = currentOptions[i];
+  });
 
   radioInputs.forEach((inp) => {
     inp.checked = false;
@@ -201,10 +205,6 @@ function showQuestion() {
     nextBtn.textContent = "Next";
     nextBtn.style.visibility = "visible";
   }
-  option.forEach((ele, i) => {
-    ele.textContent = currentOptions[i];
-    radioInputs[i].value = currentOptions[i];
-  });
   updateSpans();
 }
 flagBtn.addEventListener("click", () => {
@@ -249,8 +249,8 @@ numbers.addEventListener("click", (e) => {
 function calculateScore() {
   let score = 0;
 
-  questions.forEach((q, i) => {
-    if (String(answers[i]) === String(q.correctAnswer)) {
+  questions.forEach((qu, i) => {
+    if (String(answers[i]) === String(qu.correctAnswer)) {
       score++;
     }
   });
