@@ -30,7 +30,7 @@ if (btnLogout) {
 
 let allResults = [];
 let allExams = [];
-let allUsers = []; 
+let allUsers = [];
 
 function renderResults(resultsList) {
   cardsGrid.innerHTML = "";
@@ -42,7 +42,7 @@ function renderResults(resultsList) {
 
   resultsList.forEach((result, i) => {
     const colorClass = cardColors[i % cardColors.length];
-    const percentage = Math.round((result.score / result.total) * 100) || 0; 
+    const percentage = Math.round((result.score / result.total) * 100) || 0;
     const scoreColor = percentage >= 50 ? "#10b981" : "#ef4444";
     const dateObj = new Date(result.submittedAt);
     const dateStr = dateObj.toLocaleDateString();

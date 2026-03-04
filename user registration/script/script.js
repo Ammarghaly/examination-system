@@ -4,6 +4,7 @@ const form = document.getElementById("registerForm");
 const alertUI = document.querySelector(".alert");
 
 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^a-zA-Z0-9]).{6,}$/;
 
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
@@ -23,8 +24,10 @@ form.addEventListener("submit", async (e) => {
     return;
   }
 
-  if (formData.password.length < 6) {
-    showError("Password must be at least 6 characters ❌");
+  if (!passwordRegex.test(formData.password)) {
+    showError(
+      "Password must be at least 6 characters and include uppercase, lowercase, numbers, and symbols ❌",
+    );
     return;
   }
 

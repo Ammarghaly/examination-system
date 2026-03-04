@@ -45,7 +45,9 @@ window.addEventListener("DOMContentLoaded", async () => {
   }
 
   btnRetry.addEventListener("click", () => {
-    window.location.replace(`../../examination room/index.html?id=${data.id}`);
+    window.location.replace(
+      `../../examination room/index.html?id=${data.examId}`,
+    );
   });
 
   btnBack.addEventListener("click", () => {

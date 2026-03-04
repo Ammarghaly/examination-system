@@ -144,13 +144,6 @@ window.addEventListener("DOMContentLoaded", async () => {
   }
 });
 
-// nextBtn.addEventListener("click", () => {
-//   if (index < questions.length - 1) {
-//     index++;
-//     showQuestion();
-//   }
-// });
-
 confirmYes.addEventListener("click", async () => {
   confirmBox.classList.remove("active");
   finishExam();
