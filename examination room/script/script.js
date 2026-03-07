@@ -174,6 +174,7 @@ function showQuestion() {
   const currentOptions = currentQuestion.options;
 
   questionText.textContent = currentQuestion.question;
+  
   option.forEach((ele, i) => {
     ele.textContent = currentOptions[i];
     radioInputs[i].value = currentOptions[i];
@@ -242,8 +243,8 @@ numbers.addEventListener("click", (e) => {
 function calculateScore() {
   let score = 0;
 
-  questions.forEach((qu, i) => {
-    if (String(answers[i]) === String(qu.correctAnswer)) {
+  questions.forEach((que, i) => {
+    if (String(answers[i]) === String(que.correctAnswer)) {
       score++;
     }
   });

@@ -1,6 +1,6 @@
 import { postForm } from "../../Apis.js";
-const alertUI = document.querySelector(".alert");
 
+const alertUI = document.querySelector(".alert");
 const span = document.querySelector("span");
 const ul = document.querySelector("ul");
 
@@ -63,8 +63,10 @@ let newExam = {};
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
   alertUI.classList.remove("success", "error", "show");
+  
   const title = document.getElementById("examTitle").value;
   const time = document.getElementById("examTime").value;
+
   let questionElements = document.querySelectorAll(".container-question");
   let questions = [];
   let hasError = false;

@@ -100,18 +100,18 @@ searchInput.addEventListener("input", (e) => {
 document.addEventListener("DOMContentLoaded", async () => {
   try {
     const examsResponse = await getData(`http://localhost:3000/exams`);
-    if (examsResponse.error) throw new Error(examsResponse.error);
+    if (examsResponse.error) console.log(examsResponse.error);
     allExams = examsResponse.data;
     const usersResponse = await getData(`http://localhost:3000/users`);
-    if (usersResponse.error) throw new Error(usersResponse.error);
+    if (usersResponse.error) console.log(usersResponse.error);
     allUsers = usersResponse.data;
     const resultsResponse = await getData(`http://localhost:3000/results`);
-    if (resultsResponse.error) throw new Error(resultsResponse.error);
+    if (resultsResponse.error) console.log(resultsResponse.error);
 
     allResults = resultsResponse.data.map((result) => {
       const examDetails = allExams.find((e) => e.id === result.examId);
       const studentDetails = allUsers.find(
-        (u) => String(u.id) === String(result.userId),
+        (user) => String(user.id) === String(result.userId),
       );
 
       return {
@@ -136,7 +136,4 @@ document.addEventListener("DOMContentLoaded", async () => {
 function showError(message) {
   alertUI.textContent = message;
   alertUI.classList.add("error", "show");
-  setTimeout(() => {
-    alertUI.classList.remove("show");
-  }, 3000);
 }

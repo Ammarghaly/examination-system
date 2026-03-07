@@ -36,11 +36,11 @@ form.addEventListener("submit", async (e) => {
     return;
   }
 
-  const { data: existingUsers } = await getData(
+  const { data } = await getData(
     `http://localhost:3000/users?emailAddress=${formData.emailAddress}`,
   );
 
-  if (existingUsers.length > 0) {
+  if (data.length > 0) {
     showError("Email already registered ❌");
     return;
   }
@@ -61,15 +61,11 @@ form.addEventListener("submit", async (e) => {
 });
 
 function showError(message) {
-  setTimeout(() => {
-    alertUI.textContent = message;
-    alertUI.classList.add("error", "show");
-  }, 10);
+  alertUI.textContent = message;
+  alertUI.classList.add("error", "show");
 }
 
 function showSuccess(message) {
-  setTimeout(() => {
-    alertUI.textContent = message;
-    alertUI.classList.add("success", "show");
-  }, 10);
+  alertUI.textContent = message;
+  alertUI.classList.add("success", "show");
 }
