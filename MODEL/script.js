@@ -28,6 +28,7 @@ emailForm.addEventListener("submit", async (e) => {
   emailForm.style.display = "none";
   answerForm.style.display = "flex";
 });
+
 answerForm.addEventListener("submit", (e) => {
   e.preventDefault();
   if (
@@ -39,6 +40,7 @@ answerForm.addEventListener("submit", (e) => {
     showError("Wrong Answer ❌");
   }
 });
+
 newPasswordForm.addEventListener("submit", async (e) => {
   e.preventDefault();
 
@@ -58,9 +60,16 @@ newPasswordForm.addEventListener("submit", async (e) => {
     showError(err);
   }
 });
+
 function showError(message) {
+  alertUI.classList.remove("show");
   alertUI.textContent = message;
-  alertUI.classList.add("error", "show");
+  setTimeout(() => {
+    alertUI.classList.add("error", "show");
+  }, 10);
+  setTimeout(() => {
+    alertUI.classList.remove("show");
+  }, 3000);
 }
 const userString = localStorage.getItem("user");
 if (userString) {

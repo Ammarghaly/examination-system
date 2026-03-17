@@ -11,6 +11,7 @@ const prevBtn = document.getElementById("prevBtn");
 const nextBtn = document.getElementById("nextBtn");
 const flagBtn = document.getElementById("flagBtn");
 const optionsContainer = document.querySelector(".options");
+
 const confirmBox = document.getElementById("confirmBox");
 const confirmYes = document.getElementById("confirmYes");
 const confirmCancel = document.getElementById("confirmCancel");

@@ -1,5 +1,6 @@
 .alert {
-  width: 320px;
+  width: auto-fit;
+  padding: 5px;
   height: 50px;
   display: flex;
   align-items: center;
@@ -10,7 +11,12 @@
   right: 20px;
   bottom: 40px;
   transform: translateX(120%);
+  transition:
+    transform 0.5s ease,
+    opacity 0.5s ease;
+  transform: translateX(120%);
   opacity: 0;
+  visibility: hidden;
 }
 .alert.success {
   background-color: lightgreen;
@@ -19,8 +25,10 @@
 .alert.error {
   background-color: lightcoral;
 }
-.show{
-    animation: start  5s ease;
+.alert.show {
+  transform: translateX(0);
+  opacity: 1;
+  visibility: visible;
 }
 @keyframes start {
   0% {

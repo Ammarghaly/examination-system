@@ -154,6 +154,8 @@ form.addEventListener("submit", async (e) => {
     window.location.href='../../exams%20dashboard/index.html'
   }, 2000);
 });
+
+
 function showError(message) {
   alertUI.textContent = message;
   alertUI.classList.add("error", "show");

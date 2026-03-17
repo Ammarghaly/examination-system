@@ -115,24 +115,27 @@ body {
 }
 
 #numbers span.active {
-  background: #2196f3;
-  border-color: #2196f3;
+  background: #1d5a8b;
+  border-color: #225885;
+  color: #ffffff;
 }
 #numbers span.answered {
-  background: #00c853;
-  border-color: #00c853;
+  background: #089c46;
+  border-color: #089c46;
+  color: #ffffff;
 }
 #numbers span.active.answered {
-  background: #2196f3;
-  border-color: #00c853;
+  background: #195485;
+  border-color: #089c46;
   border-width: 2px;
+  color: #ffffff;
 }
 
 #numbers span.flagged {
   position: relative;
-  border-color: orange;
+  border-color: rgb(184, 123, 10);
   color: orange;
-  box-shadow: 0px 0px 5px 0px orange;
+  box-shadow: 0px 0px 5px 0px rgb(163, 107, 3);
 }
 
 #numbers span.flagged::after {
@@ -146,6 +149,7 @@ body {
 #numbers span.answered.flagged {
   background: #00c853;
   border-color: orange;
+    color: #ffffff;
 }
 
 .two {
@@ -374,5 +378,36 @@ hr {
   }
   to {
     transform: scale(1);
+  }
+}
+
+
+#info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+#info span[id^="spanColor"] {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  vertical-align: middle;
+  border-radius: 3px;
+}
+
+#spanColorFlag { background-color: #ffc107; }
+#spanColorAnswer { background-color: #089c46; }
+#spanColorActive {  background-color: #1d5a8b;}
+
+@media (max-width: 768px) {
+  #info  {
+    font-size: .8rem;
+  }
+  #info p {
+    width: 100%;
+   display: flex;
+   justify-content: space-between;
   }
 }

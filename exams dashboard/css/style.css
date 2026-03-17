@@ -196,18 +196,22 @@ body {
   margin: 0 auto 100px;
   max-width: 1000px;
   position: relative;
-  padding: 24px;
+  padding: 20px;
 }
 #cardsGrid,
 #h1 {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 300px));
+  grid-template-columns: repeat(3, minmax(250px, 300px));
   gap: 20px;
-  max-width: 1000px;
-  margin: 0 auto;
+  max-width: 900px;
 }
 #cardsGrid {
   justify-content: center;
+}
+@media (max-width: 950px) {
+  #cardsGrid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 300px));
+  }
 }
 @media (max-width: 600px) {
   #cardsGrid {
