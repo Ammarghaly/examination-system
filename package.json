@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "start": "json-server --watch db.json --host 0.0.0.0 --port 10000 --cors",
-    "local": "json-server --watch db.json --port 3000"
+    "local": "json-server --watch db.json --port 3000",
+    "server": "json-server --watch db.json --port 3000"
   },
   "dependencies": {
     "json-server": "^0.17.4"
