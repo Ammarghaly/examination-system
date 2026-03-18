@@ -112,13 +112,26 @@ document.addEventListener("DOMContentLoaded", async () => {
 });
 
 function showError(message) {
+  alertUI.classList.remove("show");
   alertUI.textContent = message;
-  alertUI.classList.add("error", "show");
+  setTimeout(() => {
+    alertUI.classList.add("error", "show");
+  }, 10);
+  setTimeout(() => {
+    alertUI.classList.remove("show");
+  }, 3000);
 }
 function showSuccess(message) {
+  alertUI.classList.remove("show");
   alertUI.textContent = message;
-  alertUI.classList.add("success", "show");
+  setTimeout(() => {
+    alertUI.classList.add("success", "show");
+  }, 10);
+  setTimeout(() => {
+    alertUI.classList.remove("show");
+  }, 3000);
 }
+
 
 function deleteExam(id) {
   confirmBox.classList.add("active");

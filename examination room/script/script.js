@@ -106,8 +106,14 @@ function updateTimer() {
   }
 }
 function showError(message) {
+  alertUI.classList.remove("show");
   alertUI.textContent = message;
-  alertUI.classList.add("error", "show");
+  setTimeout(() => {
+    alertUI.classList.add("error", "show");
+  }, 10);
+  setTimeout(() => {
+    alertUI.classList.remove("show");
+  }, 3000);
 }
 
 /////////////////////////////////////////////////////////////////////////
