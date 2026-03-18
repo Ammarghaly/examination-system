@@ -2,8 +2,8 @@ body {
   font-family: "Roboto", sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f5f5f5;
-  color: #333;
+  background-color: var(--bg-landing);
+  color: var(--text-body);
 }
 
 .header {
@@ -22,7 +22,7 @@ body {
   flex-direction: row;
   padding: 20px;
   background-color: white;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 6px var(--shadow-light);
 }
 
 .stat {
@@ -41,7 +41,7 @@ body {
 }
 
 .button {
-  background-color: rgb(64, 64, 212);
+  background-color: var(--landing-btn);
   padding: 15px 30px;
   border: none;
   border-radius: 6px;
@@ -52,7 +52,7 @@ body {
 }
 
 .button:hover {
-  background-color: rgb(33, 33, 139);
+  background-color: var(--landing-btn-hover);
 }
 a {
   text-decoration: none;
@@ -64,7 +64,7 @@ a {
   align-items: center;
   justify-content: space-between;
   padding: 60px 50px;
-  background-color: #e9ecef;
+  background-color: var(--landing-section-bg);
   gap: 40px;
 }
 

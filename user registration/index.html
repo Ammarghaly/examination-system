@@ -8,96 +8,124 @@
     <link rel="stylesheet" href="../globalCss/global-css.css" />
   </head>
   <body>
-    <form class="login" id="registerForm">
+    <form class="login" id="registerForm" novalidate>
       <div class="head">
         <img src="./images/hat.png" alt="image hat" />
         <h2>Create New Account</h2>
         <p></p>
       </div>
       <div class="inputs">
-        <input
-          id="firstName"
-          name="firstName"
-          type="text"
-          placeholder="First Name"
-        />
-        <input
-          id="listName"
-          name="listName"
-          type="text"
-          placeholder="Last Name"
-        />
-        <input
-          id="emailAddress"
-          name="emailAddress"
-          type="text"
-          placeholder="Email Address"
-        />
-
-        <div class="password-wrapper">
+        <div class="input-group">
           <input
-            id="password"
-            name="password"
-            type="password"
-            placeholder="Password"
+            id="firstName"
+            name="firstName"
+            type="text"
+            placeholder="First Name"
           />
-          <span
-            class="toggle-password"
-            onclick="togglePassword('password', this)"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="20"
-              height="20"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="eye-icon"
-            >
-              <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
-              <circle cx="12" cy="12" r="3"></circle>
-            </svg>
-          </span>
+          <span class="error-msg" id="firstNameError"></span>
+        </div>
+        <div class="input-group">
+          <input
+            id="listName"
+            name="listName"
+            type="text"
+            placeholder="Last Name"
+          />
+          <span class="error-msg" id="listNameError"></span>
+        </div>
+        <div class="input-group full-width">
+          <input
+            id="emailAddress"
+            name="emailAddress"
+            type="text"
+            placeholder="Email Address"
+          />
+          <span class="error-msg" id="emailAddressError"></span>
         </div>
 
-        <div class="password-wrapper">
-          <input
-            id="rePassword"
-            name="rePassword"
-            type="password"
-            placeholder="Re-Password"
-          />
-          <span
-            class="toggle-password"
-            onclick="togglePassword('rePassword', this)"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="20"
-              height="20"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="eye-icon"
+        <div class="input-group full-width">
+          <div class="password-wrapper">
+            <input
+              id="password"
+              name="password"
+              type="password"
+              placeholder="Password"
+            />
+            <span
+              class="toggle-password"
+              onclick="togglePassword('password', this)"
             >
-              <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
-              <circle cx="12" cy="12" r="3"></circle>
-            </svg>
-          </span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="eye-icon"
+              >
+                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                <circle cx="12" cy="12" r="3"></circle>
+              </svg>
+            </span>
+          </div>
+          <ul class="password-rules">
+            <li data-rule="length"><span class="bullet">●</span> At least 6 characters</li>
+            <li data-rule="uppercase"><span class="bullet">●</span> At least one uppercase letter</li>
+            <li data-rule="lowercase"><span class="bullet">●</span> At least one lowercase letter</li>
+            <li data-rule="number"><span class="bullet">●</span> At least one number</li>
+            <li data-rule="special"><span class="bullet">●</span> At least one special character</li>
+          </ul>
+          <span class="error-msg" id="passwordError"></span>
         </div>
-        <input
-          id="question"
-          name="question"
-          type="text"
-          placeholder="Security Question"
-        />
-        <input id="answer" name="answer" type="text" placeholder="answer" />
+
+        <div class="input-group full-width">
+          <div class="password-wrapper">
+            <input
+              id="rePassword"
+              name="rePassword"
+              type="password"
+              placeholder="Re-Password"
+            />
+            <span
+              class="toggle-password"
+              onclick="togglePassword('rePassword', this)"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="eye-icon"
+              >
+                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                <circle cx="12" cy="12" r="3"></circle>
+              </svg>
+            </span>
+          </div>
+          <span class="error-msg" id="rePasswordError"></span>
+        </div>
+        <div class="input-group full-width">
+          <input
+            id="question"
+            name="question"
+            type="text"
+            placeholder="Security Question"
+          />
+          <span class="error-msg" id="questionError"></span>
+        </div>
+        <div class="input-group full-width">
+          <input id="answer" name="answer" type="text" placeholder="Answer" />
+          <span class="error-msg" id="answerError"></span>
+        </div>
       </div>
       <button type="submit" id="login">Create Account</button>
       <div>
@@ -105,7 +133,6 @@
         <a href="../user login/index.html">log In </a>
       </div>
     </form>
-    <div class="alert"></div>
     <script type="module" src="./script/script.js"></script>
     <script>
       function togglePassword(inputId, iconElement) {

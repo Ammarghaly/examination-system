@@ -8,42 +8,53 @@
     <link rel="stylesheet" href="../globalCss/global-css.css" />
   </head>
   <body>
-    <form class="login">
+    <form class="login" id="loginForm" novalidate>
       <div class="head">
         <img src="./images/hat.png" alt="image hat" />
         <h2>Log In</h2>
         <p>Welcome back the examination system</p>
       </div>
       <div class="inputs">
-        <input type="text" name="email" placeholder="Email Address" />
-
-        <div class="password-wrapper">
+        <div class="input-group">
           <input
-            id="password"
-            name="password"
-            type="password"
-            placeholder="Password"
+            id="email"
+            type="text"
+            name="email"
+            placeholder="Email Address"
           />
-          <span
-            class="toggle-password"
-            onclick="togglePassword('password', this)"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="20"
-              height="20"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="eye-icon"
+          <span class="error-msg" id="emailError"></span>
+        </div>
+
+        <div class="input-group">
+          <div class="password-wrapper">
+            <input
+              id="password"
+              name="password"
+              type="password"
+              placeholder="Password"
+            />
+            <span
+              class="toggle-password"
+              onclick="togglePassword('password', this)"
             >
-              <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
-              <circle cx="12" cy="12" r="3"></circle>
-            </svg>
-          </span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="eye-icon"
+              >
+                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                <circle cx="12" cy="12" r="3"></circle>
+              </svg>
+            </span>
+          </div>
+          <span class="error-msg" id="passwordError"></span>
         </div>
         <button
           type="button"
@@ -52,16 +63,12 @@
           Forget Password?
         </button>
       </div>
-      <button type="button" id="login">Log In</button>
+      <button type="submit" id="login">Log In</button>
       <div>
         <p>Don't have an account?</p>
         <a href="../user registration/index.html">Create New Account </a>
       </div>
     </form>
-
-
-    
-    <div class="alert"></div>
     <script type="module" src="./script/script.js"></script>
     <script>
       function togglePassword(inputId, iconElement) {

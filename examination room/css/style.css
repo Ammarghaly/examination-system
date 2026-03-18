@@ -17,7 +17,7 @@ body {
   height: 100vh;
   padding: 20px;
   border-right: 2px solid;
-  border-image: linear-gradient(to bottom, transparent, #e6e9ef, transparent) 1;
+  border-image: linear-gradient(to bottom, transparent, var(--border-light), transparent) 1;
   display: flex;
   flex-direction: column;
 }
@@ -39,13 +39,13 @@ body {
 
 .progress-ring__background {
   fill: transparent;
-  stroke: #eee;
+  stroke: var(--ring-bg);
   stroke-width: 12;
 }
 
 .progress-ring__circle {
   fill: transparent;
-  stroke: #00c853;
+  stroke: var(--ring-progress);
   stroke-width: 12;
   stroke-linecap: round;
   transition: stroke 0.3s linear;
@@ -64,7 +64,7 @@ body {
 #numbers {
   display: flex;
   flex-wrap: wrap;
-  background-color: rgb(255, 255, 255);
+  background-color: var(--bg-white);
   gap: 12px;
   width: 100%;
   max-width: 400px;
@@ -97,7 +97,7 @@ body {
   cursor: pointer;
   font-weight: bold;
   transition: 0.3s ease;
-  border: 1px solid #333;
+  border: 1px solid var(--text-body);
   flex-shrink: 0;
 }
 
@@ -115,26 +115,26 @@ body {
 }
 
 #numbers span.active {
-  background: #1d5a8b;
+  background: var(--active-question);
   border-color: #225885;
-  color: #ffffff;
+  color: var(--bg-white);
 }
 #numbers span.answered {
-  background: #089c46;
-  border-color: #089c46;
-  color: #ffffff;
+  background: var(--answered-question);
+  border-color: var(--answered-question);
+  color: var(--bg-white);
 }
 #numbers span.active.answered {
   background: #195485;
-  border-color: #089c46;
+  border-color: var(--answered-question);
   border-width: 2px;
-  color: #ffffff;
+  color: var(--bg-white);
 }
 
 #numbers span.flagged {
   position: relative;
-  border-color: rgb(184, 123, 10);
-  color: orange;
+  border-color: var(--flag-border);
+  color: var(--flag-text);
   box-shadow: 0px 0px 5px 0px rgb(163, 107, 3);
 }
 
@@ -147,9 +147,9 @@ body {
 }
 
 #numbers span.answered.flagged {
-  background: #00c853;
-  border-color: orange;
-    color: #ffffff;
+  background: var(--success-btn);
+  border-color: var(--flag-text);
+    color: var(--bg-white);
 }
 
 .two {
@@ -162,15 +162,15 @@ body {
   display: grid;
   gap: 1.5rem;
   padding: 20px;
-  border: 1px solid #dad8d8;
+  border: 1px solid var(--border-question);
   border-radius: 15px;
-  background-color: #ffffff;
+  background-color: var(--bg-white);
 }
 
 .question-text h2 {
   font-size: 1.2rem;
   line-height: 1.6;
-  color: #0f172a;
+  color: var(--text-heading);
   text-align: center;
 }
 
@@ -186,7 +186,7 @@ body {
   gap: 0.7rem;
   padding: 1rem;
   border-radius: 10px;
-  border: 1px solid #e6e9ef;
+  border: 1px solid var(--border-light);
   cursor: pointer;
   transition: 0.2s;
 }
@@ -205,13 +205,13 @@ body {
 
 .option span {
   font-size: 0.95rem;
-  color: #0f172a;
+  color: var(--text-heading);
 }
 
 hr {
   border: none;
   height: 1px;
-  background: linear-gradient(90deg, transparent, #e6e9ef, transparent);
+  background: linear-gradient(90deg, transparent, var(--border-light), transparent);
   margin: 2rem 0;
 }
 
@@ -270,7 +270,7 @@ hr {
   align-items: center;
   margin-top: 30px;
   padding-top: 20px;
-  border-top: 1px solid #eee;
+  border-top: 1px solid var(--ring-bg);
 }
 
 .btn {
@@ -289,23 +289,23 @@ hr {
 }
 
 .btn-primary {
-  background-color: #0d6efd;
+  background-color: var(--btn-primary);
   color: white;
 }
 .btn-primary:hover:not(:disabled) {
-  background-color: #0b5ed7;
+  background-color: var(--btn-primary-hover);
 }
 
 .btn-secondary {
-  background-color: #6c757d;
+  background-color: var(--btn-secondary);
   color: white;
 }
 .btn-secondary:hover:not(:disabled) {
-  background-color: #5c636a;
+  background-color: var(--btn-secondary-hover);
 }
 
 .btn-warning {
-  background-color: #ffc107;
+  background-color: var(--warning);
   color: black;
 }
 .btn-warning:hover {
@@ -313,7 +313,7 @@ hr {
 }
 
 .flagged-active {
-  background-color: #dc3545 !important;
+  background-color: var(--error-btn) !important;
   color: white !important;
 }
 
@@ -323,7 +323,7 @@ hr {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5);
+  background: var(--overlay);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -338,7 +338,7 @@ hr {
 }
 
 .model-confirm {
-  background: #fff;
+  background: var(--bg-white);
   padding: 30px;
   border-radius: 10px;
   width: 300px;
@@ -364,12 +364,12 @@ hr {
 }
 
 #confirmYes {
-  background: #00c853;
+  background: var(--success-btn);
   color: white;
 }
 
 #confirmCancel {
-  background: #e74c3c;
+  background: var(--error);
 }
 
 @keyframes scaleIn {
@@ -397,9 +397,9 @@ hr {
   border-radius: 3px;
 }
 
-#spanColorFlag { background-color: #ffc107; }
-#spanColorAnswer { background-color: #089c46; }
-#spanColorActive {  background-color: #1d5a8b;}
+#spanColorFlag { background-color: var(--warning); }
+#spanColorAnswer { background-color: var(--answered-question); }
+#spanColorActive {  background-color: var(--active-question);}
 
 @media (max-width: 768px) {
   #info  {

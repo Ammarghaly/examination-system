@@ -6,7 +6,7 @@
 }
 
 body {
-  background-color: aliceblue;
+  background-color: var(--bg-body-alt);
 }
 
 .navbar {
@@ -14,8 +14,8 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 15px 40px;
-  background-color: #ffffff;
-  border-bottom: 1px solid #eaeaea;
+  background-color: var(--bg-white);
+  border-bottom: 1px solid var(--border-lighter);
   box-shadow: 0px 3px 20px 0px rgba(0, 0, 0, 0.05);
   position: relative;
 }
@@ -76,14 +76,14 @@ body {
   position: absolute;
   width: 0px;
   height: 1.5px;
-  background-color: rgb(24, 79, 189);
+  background-color: var(--primary);
   left: 50%;
   bottom: 0;
   transition: 0.5s ease;
 }
 
 .nav-links li::before {
-  background-color: rgba(24, 79, 189, 0.26);
+  background-color: var(--primary-light);
   bottom: 50%;
   border-radius: 3px;
 }
@@ -102,7 +102,7 @@ body {
 .search-container {
   display: flex;
   align-items: center;
-  background-color: #f8f9fa;
+  background-color: var(--bg-search);
   border: 1px solid transparent;
   border-radius: 20px;
   padding: 10px 20px;
@@ -112,8 +112,8 @@ body {
 }
 
 .search-container:focus-within {
-  border: 1px solid #64bed4;
-  background-color: #ffffff;
+  border: 1px solid var(--search-focus);
+  background-color: var(--bg-white);
 }
 
 .search-icon {
@@ -126,11 +126,11 @@ body {
   outline: none;
   width: 100%;
   font-size: 14px;
-  color: #333;
+  color: var(--text-body);
 }
 
 .search-container input::placeholder {
-  color: #999;
+  color: var(--text-placeholder);
 }
 
 .user-profile {
@@ -147,7 +147,7 @@ body {
 .user-name {
   font-size: 14px;
   font-weight: 700;
-  color: #111;
+  color: var(--text-dark);
 }
 
 .avatar {
@@ -156,7 +156,7 @@ body {
   border-radius: 50%;
   overflow: hidden;
   position: relative;
-  border: 1px solid #e9e8e8;
+  border: 1px solid var(--border-avatar);
   cursor: pointer;
 }
 
@@ -204,10 +204,10 @@ body {
 }
 
 .btn-logout:hover {
-  background-color: #ffeaea;
-  color: #d32f2f;
-  border-color: #ffcccc;
-  stroke: #d32f2f;
+  background-color: var(--error-hover-bg);
+  color: var(--error-hover);
+  border-color: var(--error-hover-border);
+  stroke: var(--error-hover);
 }
 @media (max-width: 900px) {
   .navbar {
@@ -233,7 +233,7 @@ body {
     background-color: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(10px);
     text-align: center;
-    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 15px var(--shadow-light);
     z-index: 999;
   }
 
@@ -315,26 +315,26 @@ body {
   padding-left: 24px;
 }
 .card-green {
-  --bg-color: #e5f7f0;
-  --accent-color: #1a7b54;
+  --bg-color: var(--card-green-bg-light);
+  --accent-color: var(--card-green-accent);
 }
 .card-purple {
-  --bg-color: #f4ecfb;
-  --accent-color: #7d48b1;
+  --bg-color: var(--card-purple-bg-light);
+  --accent-color: var(--card-purple-accent);
 }
 .card-blue {
-  --bg-color: #eaf2ff;
-  --accent-color: #1c5fd1;
+  --bg-color: var(--card-blue-bg-light);
+  --accent-color: var(--card-blue-accent);
 }
 
 .card-orange {
-  --bg-color: #fff4ed;
-  --accent-color: #b54708;
+  --bg-color: var(--card-orange-bg-light);
+  --accent-color: var(--card-orange-accent);
 }
 
 .card-red {
-  --bg-color: #ffe4e6;
-  --accent-color: #be123c;
+  --bg-color: var(--card-red-bg-light);
+  --accent-color: var(--card-red-accent);
 }
 
 .exam-card {
@@ -368,7 +368,7 @@ body {
 .exam-title {
   font-size: 22px;
   font-weight: 800;
-  color: #111;
+  color: var(--text-dark);
   margin-bottom: 16px;
 }
 
@@ -378,7 +378,7 @@ body {
 }
 
 .meta-pill {
-  background-color: #ffffff;
+  background-color: var(--bg-white);
   padding: 6px 14px;
   border-radius: 20px;
   display: flex;
@@ -386,7 +386,7 @@ body {
   gap: 6px;
   font-size: 13px;
   font-weight: 600;
-  color: #333;
+  color: var(--text-body);
 }
 
 .card-footer {
@@ -397,7 +397,7 @@ body {
   display: block;
   font-size: 11px;
   font-weight: 700;
-  color: #888;
+  color: var(--text-muted);
   margin-bottom: 8px;
   letter-spacing: 0.5px;
 }
@@ -418,19 +418,19 @@ body {
 .teacher-name {
   font-size: 14px;
   font-weight: 700;
-  color: #111;
+  color: var(--text-dark);
 }
 
 .add-title {
   font-size: 18px;
   font-weight: 800;
-  color: #111;
+  color: var(--text-dark);
   margin-bottom: 10px;
 }
 
 .add-desc {
   font-size: 14px;
-  color: #888;
+  color: var(--text-muted);
   line-height: 1.5;
   max-width: 220px;
 }
@@ -439,15 +439,15 @@ body {
   border-radius: 20px;
   font-size: 11px;
   font-weight: 800;
-  background: #fff;
+  background: var(--bg-white);
 }
 
 .status-active {
-  color: #1a7b54;
+  color: var(--card-green-accent);
 }
 
 .status-inactive {
-  color: #be123c;
+  color: var(--card-red-accent);
 }
 
 .admin-actions {
@@ -476,32 +476,32 @@ body {
 
 .btn-enable {
   flex: 1;
-  background: #e5f7f0;
-  color: #1a7b54;
+  background: var(--card-green-bg-light);
+  color: var(--card-green-accent);
 }
 
 .btn-disable {
   flex: 1;
-  background: #ffe4e6;
-  color: #be123c;
+  background: var(--card-red-bg-light);
+  color: var(--card-red-accent);
 }
 
 .btn-timer {
   flex: 1;
-  background: #eaf2ff;
-  color: #1c5fd1;
+  background: var(--card-blue-bg-light);
+  color: var(--card-blue-accent);
 }
 
 .btn-delete {
-  background: #ffe4e6;
-  color: #be123c;
+  background: var(--card-red-bg-light);
+  color: var(--card-red-accent);
   padding: 8px 12px;
 }
 
 .prompt {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.5);
+  background: var(--overlay);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -551,12 +551,12 @@ body {
 }
 
 #promptYes {
-  background: #3498db;
+  background: var(--btn-prompt);
   color: white;
 }
 
 #promptCancel {
-  background: #ccc;
+  background: var(--btn-prompt-cancel);
 }
 
 @keyframes scaleIn {
@@ -573,7 +573,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5);
+  background: var(--overlay);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -588,7 +588,7 @@ body {
 }
 
 .model-confirm {
-  background: #fff;
+  background: var(--bg-white);
   padding: 30px;
   border-radius: 10px;
   width: 300px;
@@ -614,12 +614,12 @@ body {
 }
 
 #confirmYes {
-  background: #00c853;
+  background: var(--success-btn);
   color: white;
 }
 
 #confirmCancel {
-  background: #e74c3c;
+  background: var(--error);
 }
 
 @keyframes scaleIn {

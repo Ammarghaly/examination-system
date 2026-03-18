@@ -6,7 +6,7 @@
 }
 
 body {
-  background-color: aliceblue;
+  background-color: var(--bg-body-alt);
 }
 
 .navbar {
@@ -14,8 +14,8 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 15px 40px;
-  background-color: #ffffff;
-  border-bottom: 1px solid #eaeaea;
+  background-color: var(--bg-white);
+  border-bottom: 1px solid var(--border-lighter);
   box-shadow: 0px 3px 20px 0px rgba(0, 0, 0, 0.05);
   position: relative;
 }
@@ -76,14 +76,14 @@ body {
   position: absolute;
   width: 0px;
   height: 1.5px;
-  background-color: rgb(24, 79, 189);
+  background-color: var(--primary);
   left: 50%;
   bottom: 0;
   transition: 0.5s ease;
 }
 
 .nav-links li::before {
-  background-color: rgba(24, 79, 189, 0.26);
+  background-color: var(--primary-light);
   bottom: 50%;
   border-radius: 3px;
 }
@@ -102,7 +102,7 @@ body {
 .search-container {
   display: flex;
   align-items: center;
-  background-color: #f8f9fa;
+  background-color: var(--bg-search);
   border: 1px solid transparent;
   border-radius: 20px;
   padding: 10px 20px;
@@ -112,8 +112,8 @@ body {
 }
 
 .search-container:focus-within {
-  border: 1px solid #64bed4;
-  background-color: #ffffff;
+  border: 1px solid var(--search-focus);
+  background-color: var(--bg-white);
 }
 
 .search-icon {
@@ -126,11 +126,11 @@ body {
   outline: none;
   width: 100%;
   font-size: 14px;
-  color: #333;
+  color: var(--text-body);
 }
 
 .search-container input::placeholder {
-  color: #999;
+  color: var(--text-placeholder);
 }
 
 .user-profile {
@@ -147,7 +147,7 @@ body {
 .user-name {
   font-size: 14px;
   font-weight: 700;
-  color: #111;
+  color: var(--text-dark);
 }
 
 .avatar {
@@ -156,7 +156,7 @@ body {
   border-radius: 50%;
   overflow: hidden;
   position: relative;
-  border: 1px solid #e9e8e8;
+  border: 1px solid var(--border-avatar);
   cursor: pointer;
 }
 
@@ -204,10 +204,10 @@ body {
 }
 
 .btn-logout:hover {
-  background-color: #ffeaea;
-  color: #d32f2f;
-  border-color: #ffcccc;
-  stroke: #d32f2f;
+  background-color: var(--error-hover-bg);
+  color: var(--error-hover);
+  border-color: var(--error-hover-border);
+  stroke: var(--error-hover);
 }
 @media (max-width: 900px) {
   .navbar {
@@ -233,7 +233,7 @@ body {
     background-color: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(10px);
     text-align: center;
-    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 15px var(--shadow-light);
     z-index: 999;
   }
 
@@ -317,26 +317,26 @@ body {
   padding-left: 24px;
 }
 .card-green {
-  --bg-color: #bbfce3;
-  --accent-color: #1a7b54;
+  --bg-color: var(--card-green-bg);
+  --accent-color: var(--card-green-accent);
 }
 .card-purple {
-  --bg-color: #dfc5f7;
-  --accent-color: #7d48b1;
+  --bg-color: var(--card-purple-bg);
+  --accent-color: var(--card-purple-accent);
 }
 .card-blue {
-  --bg-color: #aec8f1;
-  --accent-color: #1c5fd1;
+  --bg-color: var(--card-blue-bg);
+  --accent-color: var(--card-blue-accent);
 }
 
 .card-orange {
-  --bg-color: #f8e0d1;
-  --accent-color: #b54708;
+  --bg-color: var(--card-orange-bg);
+  --accent-color: var(--card-orange-accent);
 }
 
 .card-red {
-  --bg-color: #f8c7ca;
-  --accent-color: #be123c;
+  --bg-color: var(--card-red-bg);
+  --accent-color: var(--card-red-accent);
 }
 
 .exam-card {
@@ -364,7 +364,7 @@ body {
 }
 
 .subject-tag {
-  background-color: #ffffff;
+  background-color: var(--bg-white);
   color: var(--accent-color);
   font-size: 11px;
   font-weight: 800;
@@ -374,7 +374,7 @@ body {
 }
 
 .subject-icon {
-  background-color: #ffffff;
+  background-color: var(--bg-white);
   width: 36px;
   height: 36px;
   border-radius: 50%;
@@ -392,7 +392,7 @@ body {
 .exam-title {
   font-size: 22px;
   font-weight: 800;
-  color: #111;
+  color: var(--text-dark);
   margin-bottom: 16px;
 }
 
@@ -402,7 +402,7 @@ body {
 }
 
 .meta-pill {
-  background-color: #ffffff;
+  background-color: var(--bg-white);
   padding: 6px 14px;
   border-radius: 20px;
   display: flex;
@@ -410,7 +410,7 @@ body {
   gap: 6px;
   font-size: 13px;
   font-weight: 600;
-  color: #333;
+  color: var(--text-body);
 }
 
 .card-footer {
@@ -421,7 +421,7 @@ body {
   display: block;
   font-size: 11px;
   font-weight: 700;
-  color: #888;
+  color: var(--text-muted);
   margin-bottom: 8px;
   letter-spacing: 0.5px;
 }
@@ -442,11 +442,11 @@ body {
 .teacher-name {
   font-size: 14px;
   font-weight: 700;
-  color: #111;
+  color: var(--text-dark);
 }
 .add-exam-card {
-  background-color: #ffffff;
-  border: 2px dashed #d1d5db;
+  background-color: var(--bg-white);
+  border: 2px dashed var(--border-dashed);
   border-radius: 24px;
   padding: 30px 20px;
   display: flex;
@@ -486,13 +486,13 @@ body {
 .add-title {
   font-size: 18px;
   font-weight: 800;
-  color: #111;
+  color: var(--text-dark);
   margin-bottom: 10px;
 }
 
 .add-desc {
   font-size: 14px;
-  color: #888;
+  color: var(--text-muted);
   line-height: 1.5;
   max-width: 220px;
 }
@@ -503,7 +503,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #03030370;
+  background-color: var(--overlay-card);
   z-index: 100;
   border-radius: 24px;
   pointer-events: none;

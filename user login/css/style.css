@@ -9,7 +9,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgb(243, 244, 246);
+  background-color: var(--bg-body);
   min-height: 100vh;
   padding: 15px;
   position: relative;
@@ -23,11 +23,11 @@ body {
   align-items: start;
   justify-content: space-around;
   flex-direction: column;
-  background-color: rgb(254, 254, 254);
+  background-color: var(--bg-card);
   padding: 25px;
-  box-shadow: 0px 0px 11px 3px #00000045;
+  box-shadow: 0px 0px 11px 3px var(--shadow);
   border-radius: 10px;
-  border-top: 6px solid rgb(24, 79, 189);
+  border-top: 6px solid var(--primary);
 }
 
 .login .head {
@@ -42,15 +42,15 @@ body {
 .login .head img {
   width: 65px;
   height: 65px;
-  background-color: rgb(231, 235, 246);
+  background-color: var(--bg-img);
   border-radius: 50%;
 }
 .login h2 {
-  color: rgb(28, 25, 82);
+  color: var(--primary-deep);
 }
 .login .head p {
   font-size: 0.8rem;
-  color: #ccc;
+  color: var(--text-light);
 }
 .login .inputs {
   display: flex;
@@ -68,7 +68,7 @@ body {
   padding: 8px 10px;
   border-radius: 7px;
   outline: none;
-  border: 2px solid #ccc;
+  border: 2px solid var(--border);
   font-size: 1rem;
 }
 .login .inputs input::placeholder {
@@ -76,23 +76,23 @@ body {
   font-weight: normal;
 }
 .login .inputs input:focus {
-  border-color: rgb(141, 169, 245);
+  border-color: var(--primary-focus);
 }
 .login .inputs button {
   border: none;
-  color: rgb(42, 97, 162);
+  color: var(--primary-accent);
   cursor: pointer;
 }
 .login .inputs ~ button {
-  background-color: rgb(12, 71, 189);
+  background-color: var(--primary-hover);
   color: white;
   cursor: pointer;
   transition: 0.5s ease;
-  box-shadow: 0px 0px 11px 3px #00000045;
+  box-shadow: 0px 0px 11px 3px var(--shadow);
 }
 .login .inputs ~ button:active {
   transform: translateY(2px);
-  box-shadow: 0px 0px 11px 3px #00000045 inset;
+  box-shadow: 0px 0px 11px 3px var(--shadow) inset;
 }
 .login .inputs ~ div {
   display: flex;
@@ -102,16 +102,50 @@ body {
   justify-content: center;
 }
 .login .inputs ~ div p {
-  color: #ccc;
+  color: var(--text-light);
 }
 .login .inputs ~ div a {
   text-decoration: none;
-  color: rgb(42, 97, 162);
+  color: var(--primary-accent);
   cursor: pointer;
 }
 button a {
-  color: rgb(42, 97, 162);
+  color: var(--primary-accent);
 }
+
+/* Input group wrapper */
+.input-group {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+/* Inline error messages */
+.error-msg {
+  font-size: 0.75rem;
+  color: var(--error);
+  min-height: 0;
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  transition: all 0.25s ease;
+  padding-left: 4px;
+}
+.error-msg.show {
+  min-height: 16px;
+  max-height: 30px;
+  opacity: 1;
+  margin-top: 4px;
+}
+
+/* Valid / Invalid input borders */
+input.valid {
+  border-color: var(--success) !important;
+}
+input.invalid {
+  border-color: var(--error) !important;
+}
+
 @media (max-width: 400px) {
   .login {
     padding: 18px;
@@ -140,7 +174,7 @@ button a {
   padding-right: 40px;
   height: 45px;
   border-radius: 7px;
-  border: 2px solid #ccc;
+  border: 2px solid var(--border);
   outline: none;
   font-size: 1rem;
 }
@@ -153,12 +187,12 @@ button a {
   cursor: pointer;
   display: flex;
   align-items: center;
-  color: #666;
+  color: var(--icon-muted);
   transition: color 0.3s;
 }
 
 .toggle-password:hover {
-  color: rgb(12, 71, 189);
+  color: var(--primary-hover);
 }
 
 .toggle-password svg {

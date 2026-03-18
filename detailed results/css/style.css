@@ -4,7 +4,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #eef1f8;
+  background: var(--bg-body-results);
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -14,12 +14,12 @@ body {
   border-radius: 20px;
   width: 380px;
   text-align: center;
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 15px 40px var(--shadow-light);
 }
 
 h2 {
   margin-bottom: 25px;
-  color: #1a237e;
+  color: var(--results-primary);
 }
 
 .circle-progress {
@@ -40,11 +40,11 @@ circle {
 }
 
 .bg {
-  stroke: #e2e8f0;
+  stroke: var(--results-stroke-bg);
 }
 
 .progress {
-  stroke: #1a237e;
+  stroke: var(--results-primary);
   stroke-dasharray: 440;
   stroke-dashoffset: 440;
   transition:
@@ -59,7 +59,7 @@ circle {
   transform: translate(-50%, -50%);
   font-size: 30px;
   font-weight: bold;
-  color: #1a237e;
+  color: var(--results-primary);
 }
 
 .btn {
@@ -75,19 +75,19 @@ circle {
 }
 
 .retry {
-  background: #1a237e;
+  background: var(--results-primary);
   color: white;
 }
 
 .retry:hover {
-  background: #0d145a;
+  background: var(--results-hover);
 }
 
 .back {
   background: white;
-  border: 1px solid #ccc;
+  border: 1px solid var(--border);
 }
 
 .back:hover {
-  background: #f5f5f5;
+  background: var(--bg-landing);
 }

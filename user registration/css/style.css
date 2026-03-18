@@ -8,7 +8,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgb(243, 244, 246);
+  background-color: var(--bg-body);
   min-height: 100vh;
   padding: 15px;
   position: relative;
@@ -22,11 +22,11 @@ body {
   align-items: start;
   justify-content: space-around;
   flex-direction: column;
-  background-color: rgb(254, 254, 254);
+  background-color: var(--bg-card);
   padding: 25px;
-  box-shadow: 0px 0px 11px 3px #00000045;
+  box-shadow: 0px 0px 11px 3px var(--shadow);
   border-radius: 10px;
-  border-top: 6px solid rgb(24, 79, 189);
+  border-top: 6px solid var(--primary);
 }
 
 .login .head {
@@ -41,21 +41,20 @@ body {
 .login .head img {
   width: 65px;
   height: 65px;
-  background-color: rgb(231, 235, 246);
+  background-color: var(--bg-img);
   border-radius: 50%;
 }
 .login h2 {
-  color: rgb(28, 25, 82);
+  color: var(--primary-deep);
 }
 .login .head p {
   font-size: 0.8rem;
-  color: #ccc;
+  color: var(--text-light);
 }
 .login .inputs {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   width: 100%;
-  height: 35%;
   gap: 10px;
   margin: 15px 0;
 }
@@ -66,12 +65,76 @@ body {
   padding: 8px 10px;
   border-radius: 7px;
   outline: none;
-  border: 2px solid #ccc;
+  border: 2px solid var(--border);
   font-size: 1rem;
+  transition: border-color 0.3s ease;
 }
-.inputs input#emailAddress,
-.inputs input[type="file"] {
+
+/* Input group wrapper */
+.input-group {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.input-group.full-width {
   grid-column: 1 / span 2;
+}
+
+/* Inline error messages */
+.error-msg {
+  font-size: 0.75rem;
+  color: var(--error);
+  min-height: 0;
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  transition: all 0.25s ease;
+  padding-left: 4px;
+}
+.error-msg.show {
+  min-height: 16px;
+  max-height: 30px;
+  opacity: 1;
+  margin-top: 4px;
+}
+
+/* Valid / Invalid input borders */
+input.valid {
+  border-color: var(--success) !important;
+}
+input.invalid {
+  border-color: var(--error) !important;
+}
+
+/* Password requirements checklist */
+.password-rules {
+  list-style: none;
+  padding: 6px 4px 2px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.password-rules li {
+  font-size: 0.73rem;
+  color: var(--text-placeholder);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: color 0.3s ease;
+}
+.password-rules li .bullet {
+  font-size: 0.6rem;
+  display: inline-flex;
+  width: 14px;
+  justify-content: center;
+  transition: color 0.3s ease;
+}
+.password-rules li.met {
+  color: var(--success);
+}
+.password-rules li.met .bullet {
+  color: var(--success);
 }
 
 .login .inputs input::placeholder {
@@ -79,23 +142,23 @@ body {
   font-weight: normal;
 }
 .login .inputs input:focus {
-  border-color: rgb(141, 169, 245);
+  border-color: var(--primary-focus);
 }
 .login .inputs button {
   border: none;
-  color: rgb(42, 97, 162);
+  color: var(--primary-accent);
   cursor: pointer;
 }
 .login .inputs ~ button {
-  background-color: rgb(12, 71, 189);
+  background-color: var(--primary-hover);
   color: white;
   cursor: pointer;
   transition: 0.5s ease;
-  box-shadow: 0px 0px 11px 3px #00000045;
+  box-shadow: 0px 0px 11px 3px var(--shadow);
 }
 .login .inputs ~ button:active {
   transform: translateY(2px);
-  box-shadow: 0px 0px 11px 3px #00000045 inset;
+  box-shadow: 0px 0px 11px 3px var(--shadow) inset;
 }
 .login .inputs ~ div {
   display: flex;
@@ -106,11 +169,11 @@ body {
   justify-content: center;
 }
 .login .inputs ~ div p {
-  color: #ccc;
+  color: var(--text-light);
 }
 .login .inputs ~ div a {
   text-decoration: none;
-  color: rgb(42, 97, 162);
+  color: var(--primary-accent);
   cursor: pointer;
 }
 @media (max-width: 400px) {
@@ -150,9 +213,10 @@ body {
   padding-right: 40px;
   height: 45px;
   border-radius: 7px;
-  border: 2px solid #ccc;
+  border: 2px solid var(--border);
   outline: none;
   font-size: 1rem;
+  transition: border-color 0.3s ease;
 }
 
 .toggle-password {
@@ -163,15 +227,14 @@ body {
   cursor: pointer;
   display: flex;
   align-items: center;
-  color: #666;
+  color: var(--icon-muted);
   transition: color 0.3s;
 }
 
 .toggle-password:hover {
-  color: rgb(12, 71, 189);
+  color: var(--primary-hover);
 }
 
 .toggle-password svg {
   display: block;
 }
-

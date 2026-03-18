@@ -1,40 +1,118 @@
 import { getData } from "../../Apis.js";
+import { showSuccess, showError } from "../../globalCss/toast.js";
 
-const inputEmail = document.querySelector('input[type="text"]');
-const inputPassword = document.querySelector('input[type="password"]');
-const loginBtn = document.querySelector("#login");
-const alertUI = document.querySelector(".alert");
+const form = document.getElementById("loginForm");
 
-loginBtn.addEventListener("click", async (e) => {
-  e.preventDefault();
-  alertUI.classList.remove("success", "error", "show");
+const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
 
-  if (!inputEmail.value.trim() || !inputPassword.value.trim()) {
-    showError("Please fill in all fields ❌");
-    return;
+// ─── Field references ───
+const fields = {
+  email: document.getElementById("email"),
+  password: document.getElementById("password"),
+};
+
+// ─── Error message elements ───
+const errors = {
+  email: document.getElementById("emailError"),
+  password: document.getElementById("passwordError"),
+};
+
+// Track which fields have been touched
+const touched = {};
+
+// ─── Validation functions per field ───
+function validateField(name) {
+  const value = fields[name].value.trim();
+  let errorMsg = "";
+
+  switch (name) {
+    case "email":
+      if (!value) errorMsg = "This field is required";
+      else if (!emailRegex.test(value)) errorMsg = "Invalid email format";
+      break;
+
+    case "password":
+      if (!value) errorMsg = "Password is required";
+      break;
   }
+
+  // Show / hide error
+  if (errorMsg) {
+    errors[name].textContent = errorMsg;
+    errors[name].classList.add("show");
+    fields[name].classList.add("invalid");
+    fields[name].classList.remove("valid");
+    return false;
+  } else {
+    errors[name].textContent = "";
+    errors[name].classList.remove("show");
+    fields[name].classList.remove("invalid");
+    if (value) {
+      fields[name].classList.add("valid");
+    } else {
+      fields[name].classList.remove("valid");
+    }
+    return true;
+  }
+}
+
+// ─── Attach blur listeners (touch-based validation) ───
+for (const name in fields) {
+  const input = fields[name];
+
+  input.addEventListener("focus", () => {
+    touched[name] = true;
+  });
+
+  input.addEventListener("blur", () => {
+    if (touched[name]) {
+      validateField(name);
+    }
+  });
+}
+
+// ─── Form submit ───
+form.addEventListener("submit", async (e) => {
+  e.preventDefault();
+
+  // Mark all as touched
+  for (const name in fields) {
+    touched[name] = true;
+  }
+
+  // Validate all fields
+  let allValid = true;
+  for (const name in fields) {
+    const isValid = validateField(name);
+    if (!isValid) allValid = false;
+  }
+
+  if (!allValid) return;
 
   const { data, error } = await getData("http://localhost:3000/users");
 
   if (error) {
-   showError("Server Error ❌");
+    showError("Server Error ❌");
     return;
   }
 
-  const user = data.find((user) => {
+  const user = data.find((u) => {
     return (
-      user.emailAddress === inputEmail.value &&
-      user.password === inputPassword.value
+      u.emailAddress === fields.email.value &&
+      u.password === fields.password.value
     );
   });
 
   if (user) {
-   showSuccess("Login Successful ✅");
-
+    showSuccess("Login Successful ✅");
     localStorage.setItem("user", JSON.stringify(user));
     window.location.replace("../../exams dashboard/index.html");
   } else {
-    showError("Invalid Email or Password ❌");
+    // Show inline error on email field
+    errors.email.textContent = "Invalid Email or Password";
+    errors.email.classList.add("show");
+    fields.email.classList.add("invalid");
+    fields.email.classList.remove("valid");
   }
 });
 
@@ -43,23 +121,10 @@ if (userString) {
   window.location.replace("../../exams dashboard/index.html");
 }
 
-function showError(message) {
-  alertUI.classList.remove("show");
-  alertUI.textContent = message;
-  setTimeout(() => {
-    alertUI.classList.add("error", "show");
-  }, 10);
-  setTimeout(() => {
-    alertUI.classList.remove("show");
-  }, 3000);
+// ─── Show registration success toast if directed here from registration ───
+if (sessionStorage.getItem("registrationSuccess")) {
+  showSuccess("Account Created Successfully ✅");
+  sessionStorage.removeItem("registrationSuccess");
 }
-function showSuccess(message) {
-  alertUI.classList.remove("show");
-  alertUI.textContent = message;
-  setTimeout(() => {
-    alertUI.classList.add("success", "show");
-  }, 10);
-  setTimeout(() => {
-    alertUI.classList.remove("show");
-  }, 3000);
-}
+
+
